@@ -1,0 +1,222 @@
+/* assets/css/components/contact-us.css */
+
+/* Variables (asegúrate de que estén definidas en tu archivo principal o aquí si es solo para esta sección) */
+:root {
+    --primary-teal: #00A79D;
+    --dark-blue: #0F2139;
+    --text-dark: #333;
+    --text-light: #fff;
+    --grey-light: #f4f4f4;
+    --border-light: #eee;
+    --transition-speed: 0.3s;
+    --very-light-grey: #f9f9f9;
+}
+
+.contact-us-section {
+    padding: 80px 0; /* Ajusta el padding según necesites */
+    background-color: var(--very-light-grey); /* Fondo gris claro para esta sección, como se ve en la imagen */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center; /* Centrar los elementos si no ocupan todo el ancho */
+    align-items: flex-start; /* Alinea arriba el contenido de las columnas */
+    gap: 30px; /* Espacio entre el formulario y la información */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 0 15px; /* Padding horizontal para el contenedor */
+    align-items: center;
+}
+
+/* --- Estilos para el Formulario de Contacto (Basado en appointment-form-card) --- */
+.appointment-form-card {
+    background-color: var(--primary-teal); /* Fondo teal como en la imagen de Contact Us */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 380px; /* Ancho mínimo antes de envolver */
+    color: var(--text-light); /* Color de texto predeterminado para la tarjeta */
+}
+
+.appointment-form-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
+.appointment-form-card h3 { /* Cambiado a h3 para el título "Contact Our Support Office" */
+    font-size: 2.2rem; /* Tamaño de fuente para el título */
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--text-light);
+    /* text-align: center; */ /* Tu imagen de Contact Us lo tiene alineado a la izquierda */
+}
+
+.appointment-form-card .highlight-text {
+    color: var(--dark-blue); /* Ajusta si quieres otro color para la palabra "Support" */
+}
+
+.appointment-form {
+    display: flex;
+    flex-direction: column; /* Apila los form-rows y form-groups verticalmente */
+    gap: 20px; /* Espacio entre filas de campos */
+}
+
+.form-row {
+    display: flex;
+    gap: 20px; /* Espacio entre los campos en una fila */
+    width: 100%; /* Asegura que la fila ocupe todo el ancho */
+}
+
+.form-group {
+    flex: 1; /* Cada grupo ocupa el espacio disponible en la fila */
+    position: relative;
+}
+
+/* Estilos para los campos con subrayado (.underline) - Aplicado a inputs y textarea */
+.form-group.underline input,
+.form-group.underline textarea {
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin bordes */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Subrayado semitransparente */
+    padding: 8px 4px; /* Padding para el texto */
+    font-size: 1rem;
+    color: var(--text-light); /* Color del texto del input */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    outline: none; /* Elimina el contorno al enfocar */
+    transition: border-bottom-color var(--transition-speed) ease;
+}
+
+.form-group.underline input::placeholder,
+.form-group.underline textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Color del placeholder */
+}
+
+.form-group.underline input:focus,
+.form-group.underline textarea:focus {
+    border-bottom-color: var(--text-light); /* Blanco puro al enfocar */
+}
+
+/* Para que la textarea abarque todo el ancho */
+.form-group.full-width {
+    width: 100%; /* Asegura que ocupe el 100% del contenedor padre (.appointment-form) */
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+    min-height: 100px; /* Altura mínima para la textarea */
+}
+
+.form-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+
+  .submit-query-btn {
+    background-color: #fff;
+    color: var(--primary-teal);
+    padding: 15px 35px;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .submit-query-btn:hover {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+  }
+
+  /* Evita que se vea demasiado comprimido en pantallas pequeñas */
+  @media (max-width: 992px) {
+    .appointment-form-wrapper {
+      justify-content: center;
+    }
+
+    .form-button-wrapper {
+      justify-content: center;
+    }
+  }
+/* --- Información de Contacto (Right Column) - Mantenido como estaba --- */
+.contact-info-wrapper {
+    flex: 1;
+    padding: 40px 0; /* Ajusta si es necesario */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los ítems de info */
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center; /* Alinea el icono y el texto arriba */
+    gap: 20px;
+}
+
+.contact-icon-circle {
+    min-width: 60px; /* Ancho fijo para el círculo del icono */
+    height: 60px;
+    background-color: var(--grey-light); /* Fondo gris claro para los círculos */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: var(--primary-teal); /* Color del icono */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra sutil para el círculo */
+}
+
+.contact-text h4 {
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 2px;
+}
+
+.contact-text p {
+    font-size: 1rem;
+    color: var(--text-dark);
+    line-height: 1;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 992px) {
+    .contact-container {
+        flex-direction: column; /* Apila las columnas en pantallas más pequeñas */
+        align-items: center;
+    }
+
+    .appointment-form-card,
+    .contact-info-wrapper {
+        width: 100%; /* Ocupa todo el ancho */
+        max-width: 600px; /* Limita el ancho en pantallas pequeñas para una mejor lectura */
+    }
+
+    .contact-info-wrapper {
+        padding-top: 30px; /* Un poco más de espacio si se apilan */
+    }
+}
+
+@media (max-width: 576px) {
+    .appointment-form-card {
+        padding: 30px;
+    }
+
+    .appointment-form-card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .form-row {
+        flex-direction: column; /* Apila los inputs en pantallas muy pequeñas */
+        gap: 15px;
+    }
+}

@@ -1,0 +1,270 @@
+/* assets/css/layout/footer.css */
+
+:root {
+    --primary-teal: #00A79D;
+    --dark-blue: #0F2139;
+    --text-dark: #333;
+    --text-light: #fff;
+    --grey-light: #f4f4f4;
+    --border-light: #eee;
+    --transition-speed: 0.3s;
+    --very-light-grey: #f9f9f9;
+}
+
+/* ===== MAIN FOOTER STYLES ===== */
+.main-footer {
+    background-color: var(--dark-blue); /* Fondo azul oscuro */
+    color: var(--text-light); /* Color de texto general blanco */
+    padding-top: 80px; /* Padding superior para las columnas */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribuye las columnas con espacio entre ellas */
+    flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */
+    gap: 40px 30px; /* Espacio entre filas y columnas */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px; /* Padding inferior para el contenido principal */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria */
+}
+
+.footer-column {
+    flex: 1 1 250px; /* Base flexible para cada columna */
+    max-width: 25%; /* Para que no crezcan demasiado en pantallas grandes */
+}
+
+.footer-heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative; /* Para el underline */
+    padding-bottom: 10px; /* Espacio para el underline */
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px; /* Longitud del underline */
+    height: 3px;
+    background-color: var(--primary-teal);
+    border-radius: 2px;
+}
+
+.about-col .footer-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+.btn-blood-bank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-teal);
+    color: var(--text-light);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color var(--transition-speed) ease;
+    margin-bottom: 30px;
+}
+
+.btn-blood-bank:hover {
+    background-color: var(--dark-blue); /* Se invierte el color al hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.get-us-heading {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--primary-teal); /* Color del "Get Us:" */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre los iconos */
+    flex-wrap: wrap; /* Por si hay muchos iconos */
+}
+
+.social-icons a {
+    color: var(--text-light);
+    font-size: 1.3rem;
+    transition: color var(--transition-speed) ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-teal);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    transition: color var(--transition-speed) ease, opacity var(--transition-speed) ease;
+}
+
+.footer-links li a:hover {
+    color: var(--primary-teal);
+    opacity: 1;
+}
+
+.branches-col .branch-item {
+    margin-bottom: 20px;
+}
+
+.branches-col .branch-item:last-child {
+    margin-bottom: 0;
+}
+
+.branches-col .branch-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--primary-teal); /* Nombre de la sucursal en teal */
+}
+
+.branches-col .branch-address,
+.branches-col .branch-phone {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2); /* Un color ligeramente más oscuro para la barra inferior */
+    padding: 20px 0;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    opacity: 0.7;
+}
+
+.copyright a {
+    color: var(--primary-teal);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+.copyright a:hover {
+    color: var(--text-light);
+}
+
+.bottom-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.bottom-links li a {
+    color: var(--primary-teal);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+.bottom-links li a:hover {
+    color: var(--text-light);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .footer-content {
+        justify-content: space-around; /* Distribuye mejor en 2 columnas */
+        gap: 30px 20px;
+        padding-bottom: 40px;
+    }
+
+    .footer-column {
+        flex: 1 1 calc(50% - 20px); /* Dos columnas en tablets */
+        max-width: calc(50% - 15px);
+        text-align: center; /* Centra el contenido de las columnas */
+    }
+
+    .footer-heading {
+        text-align: center;
+    }
+
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%); /* Centra el underline */
+    }
+
+    .about-col .footer-description,
+    .about-col .btn-blood-bank,
+    .about-col .social-icons,
+    .get-us-heading {
+        text-align: center; /* Centra el texto y botón en la columna About */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .social-icons {
+        justify-content: center; /* Centra los iconos */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-footer {
+        padding-top: 60px;
+    }
+
+    .footer-content {
+        flex-direction: column; /* Una columna en móviles */
+        align-items: center; /* Centra las columnas apiladas */
+        gap: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        max-width: 90%; /* Un poco de margen a los lados */
+        text-align: center;
+    }
+
+    .footer-links,
+    .branches-col .branch-item {
+        text-align: center;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column; /* Apila el copyright y los enlaces */
+        text-align: center;
+        gap: 10px;
+    }
+
+    .bottom-links {
+        justify-content: center; /* Centra los enlaces inferiores */
+    }
+}

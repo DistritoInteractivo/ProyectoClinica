@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinicom - Tu Clínica de Confianza</title>
+
+  <!-- Tipografía y FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlroSgJ+6iB9P1z/kQ/T3wN7d1j0U9j6T2GjXgB/N3h+kG8u+a6iP+q6E0A6V8zQ5W+G9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components/header.css" />
+  <link rel="stylesheet" href="assets/css/components/hero.css" />
+  <link rel="stylesheet" href="assets/css/components/appointment.css" />
+  <link rel="stylesheet" href="assets/css/components/about-us.css" />
+  <link rel="stylesheet" href="assets/css/components/departments.css" />
+  <link rel="stylesheet" href="assets/css/components/doctores.css" />
+  <link rel="stylesheet" href="assets/css/components/testimonials.css" />
+  <link rel="stylesheet" href="assets/css/components/stats.css" />
+  <link rel="stylesheet" href="assets/css/components/blog.css" />
+  <link rel="stylesheet" href="assets/css/components/map_newsletter.css" />
+  <link rel="stylesheet" href="assets/css/components/footer.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="contact-info">
+          <span><i class="fas fa-map-marker-alt"></i> California, TX 70240</span>
+          <span><i class="fas fa-envelope"></i> info@gmail.com</span>
+          <span><i class="fas fa-phone-alt"></i> +123 456 7890</span>
+        </div>
+        <a href="/appointment" class="btn btn-primary">Make Appointment</a>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <div class="main-nav-bar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="assets/images/logo-clinicom.png" alt="Clinicom Logo" />
+        </a>
+
+        <nav class="main-nav" id="main-navigation">
+          <ul>
+            <li><a href="/" class="nav-link active">HOME</a></li>
+
+            <li class="has-dropdown">
+              <a href="index.html" class="nav-link">PAGES <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="error.html">Error</a></li>
+              </ul>
+            </li>
+
+            <li>
+                <a href="departments.html" class="nav-link">DEPARTMENTS </a>
+            </li>
+
+            <li>
+                <a href="/doctors.html" class="nav-link">DOCTORS </a>
+            </li>
+
+            <li>
+                <a href="/blog.html" class="nav-link">BLOG</a>
+              </li>
+
+            <li><a href="/contact" class="nav-link">CONTACT</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-right">
+          <button class="search-btn" aria-label="Buscar"><i class="fas fa-search"></i></button>
+          <button class="mobile-menu-btn" id="mobile-menu-trigger" aria-label="Abrir menú" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-slider">
+    <div class="hero-slide active" style="background-image: url('assets/images/hero1.avif');">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="hero-subtitle">BEST CARE <span class="separator"></span> MODERN EQUIPMENT</p>
+          <h1 class="hero-title">Meet the <br> Best Doctors</h1>
+          <a href="#" class="btn btn-primary-hero">DISCOVER MORE</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide" style="background-image: url('assets/images/hero2.avif');">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="hero-subtitle">TRUSTED STAFF <span class="separator"></span> EXPERT HANDS</p>
+          <h1 class="hero-title">We Care <br> About You</h1>
+          <a href="#" class="btn btn-primary-hero">OUR SERVICES</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-pagination">
+      <span class="pagination-dot active" data-slide="0"></span>
+      <span class="pagination-dot" data-slide="1"></span>
+    </div>
+  </section>
+
+  <section class="appointment-section">
+    <div class="container appointment-container">
+      <!-- FORMULARIO REESTRUCTURADO -->
+      <div class="appointment-form-card">
+        <h2>Make An Appointment</h2>
+        <form action="#" method="POST" class="appointment-form">
+          <div class="form-row">
+            <div class="form-group underline">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="form-group underline">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group underline">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="form-group underline">
+              <label for="appointmentDate">Appointment Date</label>
+              <input type="text" id="appointmentDate" name="appointmentDate" placeholder="YYYY-MM-DD" onfocus="(this.type='date')" onblur="(this.type='text')" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group select-wrapper">
+              <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+              <i class="fas fa-chevron-down select-arrow"></i>
+            </div>
+
+            <div class="form-group select-wrapper">
+              <select id="department" name="department" required>
+                <option value="" disabled selected>Select Department</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="pediatrics">Pediatrics</option>
+              </select>
+              <i class="fas fa-chevron-down select-arrow"></i>
+            </div>
+          </div>
+
+          <div class="form-group full-width underline">
+            <label for="problem">Briefly state your problem *</label>
+            <textarea id="problem" name="problem" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn submit-query-btn">
+            Submit Query <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- TEXTO INFORMATIVO DERECHA -->
+      <div class="consultation-info">
+        <p class="consultation-subtitle">Free Consultation</p>
+        <h2 class="consultation-title">Get An Appointment For Get Release.</h2>
+        <p class="consultation-description">
+          Departure so attention pronounce satisfied daughters am. But shy tedious pressed studied opinion entered windows off. Advantage dependent suspicion convinced provision him yet. Timed balls match at by rooms we.
+        </p>
+
+        <div class="consultation-features">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+            <p>Appointment</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-user-md"></i></div>
+            <p>Select Doctor</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+            <p>Consultation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-us-section">
+    <div class="container about-us-container">
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="about-us-left">
+        <h2 class="section-subtitle">ABOUT US</h2>
+        <h3 class="section-title">A Great Place to Work. A Great Place to Receive Care. Leading Medicine.</h3>
+        <p class="about-us-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilis maiores, qui impedit animi. Explicabo quibusdam maxime hic eaque suscipit voluptate asperiores mollitia. Ipsam fugit, optio architecto eligendi recusandae provident! Harum.</p>
+
+        <div class="emergency-care-list">
+          <h4 class="emergency-care-title">Emergency care</h4>
+          <ul class="emergency-list">
+            <li><i class="fas fa-check-circle"></i> Primary Care</li>
+            <li><i class="fas fa-check-circle"></i> Medicine</li>
+            <li><i class="fas fa-check-circle"></i> Orthopedic</li>
+            <li><i class="fas fa-check-circle"></i> Cardiology</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- TARJETAS DERECHA -->
+      <div class="about-us-right">
+        <div class="service-card-new">
+          <div class="card-image">
+            <img src="assets/images/daily.avif" alt="Daily Care" />
+          </div>
+          <div class="card-floating">
+            <div class="card-icon-wrapper">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <h4 class="card-title-new">Daily Care</h4>
+          </div>
+          <div class="card-description-wrapper">
+            <p class="card-description-new">Article smiling respect opinion excited. Welcomed humoured rejoiced peculiar to remaining conveying.</p>
+            <a href="#" class="btn btn-secondary-new">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card-new">
+          <div class="card-image">
+            <img src="assets/images/cancer.avif" alt="Cancer Care" />
+          </div>
+          <div class="card-floating">
+            <div class="card-icon-wrapper">
+              <i class="fas fa-ribbon"></i>
+            </div>
+            <h4 class="card-title-new">Cancer Care</h4>
+          </div>
+          <div class="card-description-wrapper">
+            <p class="card-description-new">Article smiling respect opinion excited. Welcomed humoured rejoiced peculiar to remaining conveying.</p>
+            <a href="#" class="btn btn-secondary-new">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="departments-section">
+        <div class="container departments-container">
+          <div class="department-list-wrapper">
+            <ul class="department-list">
+              <li class="department-item active" data-department="medical-checkup"><i class="fas fa-notes-medical"></i> Medical Checkup</li>
+              <li class="department-item" data-department="cardiology"><i class="fas fa-heartbeat"></i> Cardiology</li>
+              <li class="department-item" data-department="dental-care"><i class="fas fa-tooth"></i> Dental Care</li>
+              <li class="department-item" data-department="neurology"><i class="fas fa-brain"></i> Neurology</li>
+            </ul>
+          </div>
+
+          <div class="department-content-wrapper">
+            <div class="department-content-card">
+              <div class="department-content active" data-department-content="medical-checkup">
+                <div class="department-inner">
+                  <div class="content-image">
+                    <img src="./assets/images/chequeo.avif" alt="Medical Checkup">
+                  </div>
+                  <div class="content-text">
+                    <h3 class="content-title">Welcome To Our Medical Checkup Department</h3>
+                    <p class="content-description">Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery.</p>
+                    <div class="button-wrapper">
+                      <a href="#" class="btn btn-primary-alt">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="department-content" data-department-content="cardiology">
+                <div class="department-inner">
+                  <div class="content-image">
+                    <img src="./assets/images/cardio.avif" alt="Cardiology">
+                  </div>
+                  <div class="content-text">
+                    <h3 class="content-title">Welcome To Our Cardiology Department</h3>
+                    <p class="content-description">Cardiology involves the study and treatment of heart conditions. Our expert team provides comprehensive care for all your cardiac needs.</p>
+                    <div class="button-wrapper">
+                      <a href="#" class="btn btn-primary-alt">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="department-content" data-department-content="dental-care">
+                <div class="department-inner">
+                  <div class="content-image">
+                    <img src="./assets/images/dent.avif" alt="Dental Care">
+                  </div>
+                  <div class="content-text">
+                    <h3 class="content-title">Welcome To Our Dental Care Department</h3>
+                    <p class="content-description">From routine check-ups to advanced procedures, our dental care department ensures your smile is healthy and bright.</p>
+                    <div class="button-wrapper">
+                      <a href="#" class="btn btn-primary-alt">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="department-content" data-department-content="neurology">
+                <div class="department-inner">
+                  <div class="content-image">
+                    <img src="./assets/images/neur.avif" alt="Neurology">
+                  </div>
+                  <div class="content-text">
+                    <h3 class="content-title">Welcome To Our Neurology Department</h3>
+                    <p class="content-description">Our neurology specialists provide compassionate care for disorders of the brain, spinal cord, and nervous system.</p>
+                    <div class="button-wrapper">
+                      <a href="#" class="btn btn-primary-alt">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
+
+<section class="doctors-section">
+    <div class="container">
+        <h2 class="section-subtitle text-center">DOCTORES</h2>
+        <h3 class="section-title text-center">Our Experts</h3>
+
+        <div class="doctors-carousel-container">
+            <button class="carousel-control prev" aria-label="Previous doctor">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="doctors-carousel">
+                <div class="doctor-card" data-index="3">
+                    <div class="doctor-image">
+                        <img src="./assets/images/doctor-3.jpg" alt="Dr. Sarah Miller">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Dr. Sarah Miller</h4>
+                        <p class="doctor-specialty">PEDIATRICS</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Mon-Fri: 9:00 - 17:00</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card" data-index="4">
+                    <div class="doctor-image">
+                        <img src="./assets/images/doctor-4.jpg" alt="Dr. David Lee">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Dr. David Lee</h4>
+                        <p class="doctor-specialty">NEUROLOGY</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Tue-Sat: 9:30 - 16:00</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-index="1">
+                    <div class="doctor-image">
+                        <img src="./assets/images/d1.avif" alt="Prof. Jones Athom">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Prof. Jones Athom</h4>
+                        <p class="doctor-specialty">ORTHOPAEDICS</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Sat-Tue: 8:30 - 14:45</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-index="2">
+                    <div class="doctor-image">
+                        <img src="./assets/images/d2.png" alt="Dr. Anam Habu">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Dr. Anam Habu</h4>
+                        <p class="doctor-specialty">CARDIOLOGIST</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Sat-Tue: 10:00 - 16:30</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-index="3">
+                    <div class="doctor-image">
+                        <img src="./assets/images/d4.png" alt="Dr. Sarah Miller">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Dr. Sarah Miller</h4>
+                        <p class="doctor-specialty">PEDIATRICS</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Mon-Fri: 9:00 - 17:00</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-index="4">
+                    <div class="doctor-image">
+                        <img src="./assets/images/d3.png" alt="Dr. David Lee">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Dr. David Lee</h4>
+                        <p class="doctor-specialty">NEUROLOGY</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Tue-Sat: 9:30 - 16:00</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-index="1">
+                    <div class="doctor-image">
+                        <img src="./assets/images/d1.avif" alt="Prof. Jones Athom">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Prof. Jones Athom</h4>
+                        <p class="doctor-specialty">ORTHOPAEDICS</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Sat-Tue: 8:30 - 14:45</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card" data-index="2">
+                    <div class="doctor-image">
+                        <img src="./assets/images/d2.png" alt="Dr. Anam Habu">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Dr. Anam Habu</h4>
+                        <p class="doctor-specialty">CARDIOLOGIST</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Sat-Tue: 10:00 - 16:30</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control next" aria-label="Next doctor">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <div class="container testimonials-container">
+        <div class="testimonial-left">
+            <h2 class="section-title">What People Say?</h2>
+            <p class="testimonial-summary">Power dried her taken place day ought the. Four and our ham west miss. Education shameless who middleton agreement how. We in found world chief is at means weeks smile.</p>
+            <div class="button-wrapper"> <a href="#" class="btn btn-secondary-new">VIEW ALL <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+      <div class="testimonial-right">
+        <div class="testimonial-slider-wrapper">
+          <div class="testimonial-slide active" data-testimonial="1">
+            <div class="testimonial-content">
+              <h3 class="testimonial-title">Exceptional Care</h3>
+              <p class="testimonial-description">Board certification is one of the most important factors to consider.</p>
+              <hr class="testimonial-divider">
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="./assets/images/op1.avif" alt="Jessika Jones">
+                </div>
+                <div class="author-info">
+                  <h4 class="author-name">Jessika Jones</h4>
+                  <p class="author-specialty">HEART SPECIALIST</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide" data-testimonial="2">
+            <div class="testimonial-content">
+              <h3 class="testimonial-title">Truly Caring</h3>
+              <p class="testimonial-description">The care I received was exceptional. The doctors were knowledgeable and took the time to explain everything. I felt very comfortable and well-informed throughout my treatment.</p>
+              <hr class="testimonial-divider">
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="./assets/images/op2.avif" alt="John Doe">
+                </div>
+                <div class="author-info">
+                  <h4 class="author-name">John Doe</h4>
+                  <p class="author-specialty">HAPPY PATIENT</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide" data-testimonial="3">
+            <div class="testimonial-content">
+              <h3 class="testimonial-title">Outstanding Service</h3>
+              <p class="testimonial-description">I highly recommend this hospital. The staff is friendly, professional, and the facilities are top-notch. My recovery was smooth, and I am very grateful for the care I received.</p>
+              <hr class="testimonial-divider">
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="./assets/images/op3.avif" alt="Jane Smith">
+                </div>
+                <div class="author-info">
+                  <h4 class="author-name">Jane Smith</h4>
+                  <p class="author-specialty">RECOVERED PATIENT</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-navigation custom-diamond-nav">
+          <button class="nav-dot active" data-slide="1" aria-label="Go to slide 1"></button>
+          <button class="nav-dot" data-slide="2" aria-label="Go to slide 2"></button>
+          <button class="nav-dot" data-slide="3" aria-label="Go to slide 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="container stats-container">
+        <div class="stat-item">
+            <div class="stat-icon">
+                <i class="fas fa-smile-beam"></i>
+            </div>
+            <h3 class="stat-number">12</h3>
+            <p class="stat-label">Satisfied Patients</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">
+                <i class="fas fa-building"></i>
+            </div>
+            <h3 class="stat-number">38</h3>
+            <p class="stat-label">Departments</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">
+                <i class="fas fa-user-md"></i>
+            </div>
+            <h3 class="stat-number">278</h3>
+            <p class="stat-label">Regular Doctors</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">
+                <i class="fas fa-users-cog"></i>
+            </div>
+            <h3 class="stat-number">1488</h3>
+            <p class="stat-label">Servant</p>
+        </div>
+    </div>
+</section>
+
+<section class="latest-blog-section">
+    <div class="container blog-header">
+        <h5 class="section-subtitle">NEWS</h5>
+        <h2 class="section-title">Latest Blog</h2>
+    </div>
+    <div class="container blog-cards-container">
+        <div class="blog-card">
+            <div class="blog-image-wrapper">
+                <img src="./assets/images/cul.avif" alt="Blog Image 1">
+                <div class="blog-date">
+                    <span class="day">12</span>
+                    <span class="month">AUG</span>
+                </div>
+            </div>
+            <div class="blog-content">
+                <div class="blog-meta">
+                    <span class="blog-author"><i class="fas fa-user"></i> John Hasi</span>
+                    <span class="blog-comments"><i class="fas fa-comments"></i> 38 Comments</span>
+                </div>
+                <h3 class="blog-title">Assistance favourable cultivated everything collecting.</h3>
+                <a href="#" class="btn-read-more">READ MORE <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="blog-image-wrapper">
+                <img src="./assets/images/salud.avif" alt="Blog Image 2">
+                <div class="blog-date">
+                    <span class="day">05</span>
+                    <span class="month">JUL</span>
+                </div>
+            </div>
+            <div class="blog-content">
+                <div class="blog-meta">
+                    <span class="blog-author"><i class="fas fa-user"></i> John Hasi</span>
+                    <span class="blog-comments"><i class="fas fa-comments"></i> 12 Comments</span>
+                </div>
+                <h3 class="blog-title">Difficult contented we determine ourselves a earnestly</h3>
+                <a href="#" class="btn-read-more">READ MORE <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="blog-image-wrapper">
+                <img src="./assets/images/tec.avif" alt="Blog Image 3">
+                <div class="blog-date">
+                    <span class="day">28</span>
+                    <span class="month">NOV</span>
+                </div>
+            </div>
+            <div class="blog-content">
+                <div class="blog-meta">
+                    <span class="blog-author"><i class="fas fa-user"></i> John Hasi</span>
+                    <span class="blog-comments"><i class="fas fa-comments"></i> 26 Comments</span>
+                </div>
+                <h3 class="blog-title">Insisted received is occasion advanced honoured</h3>
+                <a href="#" class="btn-read-more">READ MORE <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="map-newsletter-section">
+    <div class="newsletter-overlay">
+        <div class="container newsletter-content">
+            <h3 class="newsletter-title">Newsletter</h3>
+            <p class="newsletter-subtitle">Stay up to date with our latest news</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your Email*" class="newsletter-input" required>
+                <button type="submit" class="btn-secondary-new">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.3912630598686!2d70.77196027503792!3d23.04874051566497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959b489c7c645e7%3A0xc0f1b2b8e3a2c5a!2sRajkot%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2smx!4v1701700000000!5m2!1sen!2smx"
+        width="100%"
+        height="500"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="google-map-iframe"></iframe>
+</section>
+
+<footer class="main-footer">
+    <div class="container footer-content">
+        <div class="footer-column about-col">
+            <h4 class="footer-heading">About Us</h4>
+            <p class="footer-description">
+                Required honoured trifling eat pleasure man relation. Assurance yet bed was improving furniture man. Distrusts delighted
+            </p>
+            <a href="#" class="btn-blood-bank">+ BLOOD BANK</a>
+            <div class="social-icons">
+                <h5 class="get-us-heading">Get Us:</h5>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4 class="footer-heading">Department</h4>
+            <ul class="footer-links">
+                <li><a href="#">Medecine and Health</a></li>
+                <li><a href="#">Dental Care</a></li>
+                <li><a href="#">Eye Treatment</a></li>
+                <li><a href="#">Children Care</a></li>
+                <li><a href="#">Traumatology</a></li>
+                <li><a href="#">X-ray</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4 class="footer-heading">Usefull Links</h4>
+            <ul class="footer-links">
+                <li><a href="#">Ambulance</a></li>
+                <li><a href="#">Emergency</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column branches-col">
+            <h4 class="footer-heading">Our Branches</h4>
+            <div class="branch-item">
+                <p class="branch-name">ACMH Hospital:</p>
+                <p class="branch-address">4992 Bryan Avenue, Prior Lake, Minnesota</p>
+                <p class="branch-phone">Phone: 651-379-4698</p>
+            </div>
+            <div class="branch-item">
+                <p class="branch-name">Central Hospital:</p>
+                <p class="branch-address">2001 Kia Magentis, Prior Lake, Minnesota</p>
+                <p class="branch-phone">Phone: 651-379-4698</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container footer-bottom-content">
+            <p class="copyright">&copy; 2020 Clinicom. All Rights Reserved by <a href="#" target="_blank">validtemplates</a></p>
+            <ul class="bottom-links">
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/components/hero-slider.js"></script>
+  <script type="module" src="assets/js/components/departments.js"></script>
+  <script type="module" src="assets/js/components/doctors-carousel.js"></script>
+  <script type="module" src="assets/js/components/testimonials.js"></script>
+
+</body>
+</html>
+

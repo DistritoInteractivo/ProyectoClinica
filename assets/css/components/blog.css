@@ -1,0 +1,199 @@
+/* assets/css/components/blog.css */
+
+:root {
+    --primary-teal: #00A79D;
+    --dark-blue: #0F2139;
+    --text-dark: #333;
+    --text-light: #fff;
+    --grey-light: #f4f4f4;
+    --border-light: #eee;
+    --transition-speed: 0.3s;
+    --very-light-grey: #f9f9f9;
+}
+
+/* ===== LATEST BLOG SECTION STYLES ===== */
+.latest-blog-section {
+    padding: 100px 0;
+    background-color: var(--very-light-grey); /* Fondo suave */
+    text-align: center; /* Centra los títulos */
+}
+
+.blog-header {
+    margin-bottom: 50px;
+}
+
+.blog-cards-container {
+    display: flex;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
+    gap: 30px; /* Espacio entre las tarjetas */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.blog-card {
+    flex: 1 1 300px; /* Tamaño base flexible para cada tarjeta */
+    max-width: 360px; /* Ancho máximo para evitar que crezcan demasiado */
+    background-color: var(--text-light); /* Fondo blanco para la tarjeta */
+    border-radius: 8px;
+    overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image-wrapper {
+    position: relative; /* Para posicionar la fecha */
+    height: 220px; /* Altura fija para la imagen */
+    overflow: hidden; /* Asegura que la imagen no se salga */
+}
+
+.blog-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    display: block;
+}
+
+.blog-date {
+    position: absolute;
+    bottom: 0;
+    right: 20px; /* 20px desde la derecha */
+    background-color: var(--primary-teal);
+    color: var(--text-light);
+    padding: 10px 15px;
+    border-radius: 8px 8px 0 0; /* Esquinas superiores redondeadas */
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.2;
+    z-index: 2; /* Asegura que esté por encima de la imagen */
+}
+
+.blog-date .day {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.blog-date .month {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.blog-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Alinea el texto del contenido a la izquierda */
+    flex-grow: 1; /* Permite que el contenido crezca para empujar el botón abajo */
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que los meta items se envuelvan en pantallas muy pequeñas */
+    gap: 5px; /* Espacio entre autor y comentarios si se envuelven */
+}
+
+.blog-meta .fas {
+    color: var(--primary-teal);
+    margin-right: 8px;
+}
+
+.blog-title {
+    font-size: 1.4rem;
+    color: var(--dark-blue);
+    line-height: 1.4;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.btn-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-teal);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed) ease;
+    margin-top: auto; /* Empuja el botón al final del content */
+}
+
+.btn-read-more:hover {
+    color: var(--dark-blue);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .blog-cards-container {
+        gap: 25px;
+    }
+
+    .blog-card {
+        flex: 1 1 calc(50% - 15px); /* Dos columnas en tablets */
+        max-width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .latest-blog-section {
+        padding: 80px 0;
+    }
+
+    .blog-header {
+        margin-bottom: 40px;
+    }
+
+    .blog-cards-container {
+        flex-direction: column; /* Una columna en móviles */
+        align-items: center; /* Centra las tarjetas apiladas */
+        gap: 25px;
+    }
+
+    .blog-card {
+        flex: 1 1 100%;
+        max-width: 90%; /* Un poco de margen a los lados */
+    }
+
+    .blog-image-wrapper {
+        height: 180px;
+    }
+
+    .blog-date {
+        padding: 8px 12px;
+        right: 15px;
+    }
+
+    .blog-date .day {
+        font-size: 1.3rem;
+    }
+
+    .blog-date .month {
+        font-size: 0.8rem;
+    }
+
+    .blog-content {
+        padding: 20px;
+    }
+
+    .blog-meta {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+
+    .blog-title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,132 @@
+/* assets/css/components/page-hero.css */
+
+/* Reusa variables si las tienes en main.css o style.css */
+:root {
+    --dark-blue: #0F2139;
+    --primary-teal: #00A79D;
+    --text-dark: #333;
+    --text-light: #fff;
+    --grey-light: #f4f4f4;
+    --border-light: #eee;
+    --transition-speed: 0.3s;
+}
+
+/* ===== PAGE HERO SECTION STYLES (para páginas internas) ===== */
+.page-hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Altura más compacta para páginas internas */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto */
+}
+
+/* Capa oscura semitransparente sobre la imagen de fondo */
+.page-hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Capa oscura */
+    z-index: 0;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima de la capa oscura */
+    color: var(--text-light); /* Texto blanco */
+    padding: 0 20px; /* Padding horizontal */
+    max-width: 1200px; /* Limita el ancho del contenido */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.page-hero-title {
+    font-size: 3.5rem; /* Tamaño grande para el título de la página */
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center; /* Centra los elementos del breadcrumb */
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8); /* Color suave para los enlaces */
+}
+
+.breadcrumb-item {
+    color: inherit; /* Hereda el color del breadcrumb */
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+    text-transform: uppercase;
+}
+
+.breadcrumb-item:hover {
+    color: var(--primary-teal); /* Color teal al pasar el ratón */
+}
+
+.breadcrumb-item.active {
+    color: var(--primary-teal); /* Color teal para la página actual */
+    font-weight: 600;
+}
+
+.breadcrumb-separator {
+    margin: 0 10px; /* Espacio alrededor de la flecha */
+    color: rgba(255, 255, 255, 0.6); /* Color más suave para las flechas */
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .page-hero-section {
+        height: 250px;
+    }
+
+    .page-hero-title {
+        font-size: 2.8rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero-section {
+        height: 200px;
+    }
+
+    .page-hero-title {
+        font-size: 2.2rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+        flex-wrap: wrap; /* Permite que el breadcrumb se envuelva si es muy largo */
+        justify-content: center;
+    }
+
+    .breadcrumb-item,
+    .breadcrumb-separator {
+        margin: 5px; /* Ajusta el margen para el wrap */
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero-section {
+        height: 180px;
+    }
+
+    .page-hero-title {
+        font-size: 1.8rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+}

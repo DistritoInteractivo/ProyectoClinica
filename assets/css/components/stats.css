@@ -1,0 +1,99 @@
+/* assets/css/components/stats.css */
+
+:root {
+    --primary-teal: #00A79D;
+    --dark-blue: #0F2139;
+    --text-dark: #333;
+    --text-light: #fff;
+    --grey-light: #f4f4f4;
+    --border-light: #eee;
+    --transition-speed: 0.3s;
+    --very-light-grey: #f9f9f9;
+}
+
+/* ===== STATS SECTION STYLES ===== */
+.stats-section {
+    background-color: var(--primary-teal); /* Color de fondo verde azulado */
+    padding: 80px 0; /* Espaciado superior e inferior */
+    color: var(--text-light); /* Color de texto blanco para todo el contenido */
+    text-align: center; /* Centra el texto por defecto */
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos con espacio entre ellos */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    gap: 40px 20px; /* Espacio entre filas y columnas */
+}
+
+.stat-item {
+    flex: 1 1 200px; /* Crece y se encoge, con un ancho base de 200px */
+    max-width: 25%; /* Para asegurar que no ocupen más de 1/4 en pantallas grandes */
+    padding: 20px;
+    /* transition: transform 0.3s ease; -- Opcional: para efectos hover si los quieres -- */
+}
+
+/* .stat-item:hover {
+    transform: translateY(-5px);
+} */
+
+.stat-icon {
+    font-size: 3.5rem; /* Tamaño grande para los iconos */
+    color: var(--text-light); /* Color blanco para los iconos */
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    font-size: 3rem; /* Tamaño grande para los números */
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1; /* Elimina espacio extra de línea */
+    color: var(--text-light); /* Asegura que los números también sean blancos */
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.8; /* Ligeramente más tenue que los números */
+    text-transform: capitalize; /* Capitaliza la primera letra de cada palabra */
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .stat-item {
+        flex: 1 1 45%; /* Dos columnas en tablets */
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-section {
+        padding: 60px 0;
+    }
+
+    .stats-container {
+        gap: 30px 15px;
+    }
+
+    .stat-item {
+        flex: 1 1 100%; /* Una columna en móviles pequeños */
+        max-width: 100%;
+    }
+
+    .stat-icon {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+    }
+}

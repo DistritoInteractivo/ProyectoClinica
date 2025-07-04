@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinicom - Tu Clínica de Confianza</title>
+
+  <!-- Tipografía y FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlroSgJ+6iB9P1z/kQ/T3wN7d1j0U9j6T2GjXgB/N3h+kG8u+a6iP+q6E0A6V8zQ5W+G9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components/about-us.css" />
+  <link rel="stylesheet" href="assets/css/components/header.css" />
+  <link rel="stylesheet" href="assets/css/components/heroV2.css">
+  <link rel="stylesheet" href="assets/css/components/about-content.css" />
+  <link rel="stylesheet" href="assets/css/components/appointment.css" />
+  <link rel="stylesheet" href="assets/css/components/info-cards.css">
+  <link rel="stylesheet" href="assets/css/components/facts-counter.css">
+  <link rel="stylesheet" href="assets/css/components/stats.css" />
+  <link rel="stylesheet" href="assets/css/components/blog.css" />
+  <link rel="stylesheet" href="assets/css/components/doctores.css" />
+  <link rel="stylesheet" href="assets/css/components/testimonials.css" />
+  <link rel="stylesheet" href="assets/css/components/map_newsletter.css" />
+  <link rel="stylesheet" href="assets/css/components/footer.css" />
+  <link rel="stylesheet" href="assets/css/components/departmentsV2.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="contact-info">
+          <span><i class="fas fa-map-marker-alt"></i> California, TX 70240</span>
+          <span><i class="fas fa-envelope"></i> info@gmail.com</span>
+          <span><i class="fas fa-phone-alt"></i> +123 456 7890</span>
+        </div>
+        <a href="/appointment" class="btn btn-primary">Make Appointment</a>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <div class="main-nav-bar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="assets/images/logo-clinicom.png" alt="Clinicom Logo" />
+        </a>
+
+        <nav class="main-nav" id="main-navigation">
+          <ul>
+            <li><a href="/" class="nav-link active">HOME</a></li>
+
+            <li class="has-dropdown">
+              <a href="/pages" class="nav-link">PAGES <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="error.html">Error</a></li>
+              </ul>
+            </li>
+
+            <li>
+                <a href="departments.html" class="nav-link">DEPARTMENTS </a>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="/doctors" class="nav-link">DOCTORS <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="/doctors/team">Our Doctors</a></li>
+                <li><a href="/doctors/specialists">Specialists</a></li>
+              </ul>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="/blog" class="nav-link">BLOG <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="/blog/news">News</a></li>
+                <li><a href="/blog/articles">Articles</a></li>
+              </ul>
+            </li>
+
+            <li><a href="/contact" class="nav-link">CONTACT</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-right">
+          <button class="search-btn" aria-label="Buscar"><i class="fas fa-search"></i></button>
+          <button class="mobile-menu-btn" id="mobile-menu-trigger" aria-label="Abrir menú" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero-section" style="background-image: url('assets/images/depar.avif');">
+    <div class="container page-hero-content">
+        <h1 class="page-hero-title">Departments</h1>
+        <div class="breadcrumb">
+            <a href="index.html" class="breadcrumb-item">HOME</a>
+            <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+            <a href="#" class="breadcrumb-item">PAGES</a>
+            <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="breadcrumb-item active">Departments</span>
+        </div>
+    </div>
+</section>
+
+<section class="departments-section">
+    <div class="container departments-container">
+      <div class="section-header">
+        <h5 class="section-subtitle">DEPARTMENTS</h5>
+        <h2 class="section-title">Centers of excellence</h2>
+      </div>
+
+      <div class="departments-grid">
+        <div class="department-card">
+          <div class="department-card-bg-number">01</div>
+          <div class="department-icon-wrapper">
+            <i class="fas fa-wheelchair"></i>
+          </div>
+          <h4 class="department-title">ORTHOPAEDICS</h4>
+          <p class="department-description">Because yet mistake feeling has men. Consulted disposing to moonlights. Engage piqued in on coming.</p>
+          <ul class="department-checkmark-list">
+            <li><i class="fas fa-check-circle"></i> Joints</li>
+            <li><i class="fas fa-check-circle"></i> Spine</li>
+            <li><i class="fas fa-check-circle"></i> Sports Medicine</li>
+            <li><i class="fas fa-check-circle"></i> Bones</li>
+            <li><i class="fas fa-check-circle"></i> Spinal Fusion</li>
+          </ul>
+          <a href="#" class="btn-get-appointment">GET APPOINTMENT <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <div class="department-card">
+          <div class="department-card-bg-number">02</div>
+          <div class="department-icon-wrapper">
+            <i class="fas fa-head-side-mask"></i>
+          </div>
+          <h4 class="department-title">DERMATOLOGY</h4>
+          <p class="department-description">Because yet mistake feeling has men. Consulted disposing to moonlights. Engage piqued in on coming.</p>
+          <ul class="department-checkmark-list">
+            <li><i class="fas fa-check-circle"></i> Pediatric</li>
+            <li><i class="fas fa-check-circle"></i> Immunodermatologists</li>
+            <li><i class="fas fa-check-circle"></i> Cosmetic</li>
+            <li><i class="fas fa-check-circle"></i> Dermatopathologists</li>
+            <li><i class="fas fa-check-circle"></i> Olio Fusion</li>
+          </ul>
+          <a href="#" class="btn-get-appointment">GET APPOINTMENT <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <div class="department-card">
+          <div class="department-card-bg-number">03</div>
+          <div class="department-icon-wrapper">
+            <i class="fas fa-cut"></i>
+          </div>
+          <h4 class="department-title">SURGERY</h4>
+          <p class="department-description">Because yet mistake feeling has men. Consulted disposing to moonlights. Engage piqued in on coming.</p>
+          <ul class="department-checkmark-list">
+            <li><i class="fas fa-check-circle"></i> Laparoscopy</li>
+            <li><i class="fas fa-check-circle"></i> Endoscopy</li>
+            <li><i class="fas fa-check-circle"></i> Bronchoscopy</li>
+            <li><i class="fas fa-check-circle"></i> Laser Surgery</li>
+            <li><i class="fas fa-check-circle"></i> Electrosurgery</li>
+          </ul>
+          <a href="#" class="btn-get-appointment">GET APPOINTMENT <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <div class="department-card">
+          <div class="department-card-bg-number">04</div>
+          <div class="department-icon-wrapper">
+            <i class="fas fa-virus"></i>
+          </div>
+          <h4 class="department-title">CORONA CHECKUP</h4>
+          <p class="department-description">Because yet mistake feeling has men. Consulted disposing to moonlights. Engage piqued in on coming.</p>
+          <ul class="department-checkmark-list">
+            <li><i class="fas fa-check-circle"></i> Rapid Diagnostic</li>
+            <li><i class="fas fa-check-circle"></i> Antibody</li>
+            <li><i class="fas fa-check-circle"></i> Bronchoscopy</li>
+            <li><i class="fas fa-check-circle"></i> Diagnostic Testing</li>
+            <li><i class="fas fa-check-circle"></i> Viral Culturing</li>
+            <li><i class="fas fa-check-circle"></i> Risks</li>
+          </ul>
+          <a href="#" class="btn-get-appointment">GET APPOINTMENT <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="counts-faq-section">
+    <div class="container counts-faq-container">
+
+      <!-- COLUMNA IZQUIERDA CON CONTORNO Y FONDO BLANCO -->
+      <div class="staff-counts-wrapper staff-card">
+        <div class="count-items-grid">
+          <div class="count-item">
+            <h3 class="count-number">38+</h3>
+            <p class="count-label">Doctors</p>
+          </div>
+          <div class="count-item">
+            <h3 class="count-number">56+</h3>
+            <p class="count-label">Nurse</p>
+          </div>
+          <div class="count-item">
+            <h3 class="count-number">45+</h3>
+            <p class="count-label">Staff</p>
+          </div>
+        </div>
+        <p class="staff-description-p1">
+          We leaf to snug on no need. Way own uncommonly travelling now acceptance bed compliment solicitude.
+        </p>
+        <p class="staff-description-p2">
+          Demesne far hearted suppose venture excited see had has. Dependent on so extremely delivered by.
+        </p>
+        <a href="#" class="btn btn-doctors-list">DOCTORS LIST</a>
+      </div>
+
+      <!-- FAQ ALINEADO CENTRADO VERTICAL -->
+      <div class="faq-align-wrapper">
+        <div class="faq-wrapper">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Why do I need to have a Visitor Pass?</span>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="faq-answer hidden">
+              <p>General windows effects not are drawing man garrets. Common indeed garden you his ladies out yet.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I take a bus to the Hospital?</span>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="faq-answer hidden">
+              <p>Detailed answer about bus routes and transportation options to the hospital.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I get my lab results over the phone?</span>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="faq-answer hidden">
+              <p>Information regarding the policy on receiving lab results over the phone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="appointment-section">
+    <div class="container appointment-container">
+      <!-- FORMULARIO REESTRUCTURADO -->
+      <div class="appointment-form-card">
+        <h2>Make An Appointment</h2>
+        <form action="#" method="POST" class="appointment-form">
+          <div class="form-row">
+            <div class="form-group underline">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="form-group underline">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group underline">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="form-group underline">
+              <label for="appointmentDate">Appointment Date</label>
+              <input type="text" id="appointmentDate" name="appointmentDate" placeholder="YYYY-MM-DD" onfocus="(this.type='date')" onblur="(this.type='text')" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group select-wrapper">
+              <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+              <i class="fas fa-chevron-down select-arrow"></i>
+            </div>
+
+            <div class="form-group select-wrapper">
+              <select id="department" name="department" required>
+                <option value="" disabled selected>Select Department</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="pediatrics">Pediatrics</option>
+              </select>
+              <i class="fas fa-chevron-down select-arrow"></i>
+            </div>
+          </div>
+
+          <div class="form-group full-width underline">
+            <label for="problem">Briefly state your problem *</label>
+            <textarea id="problem" name="problem" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn submit-query-btn">
+            Submit Query <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- TEXTO INFORMATIVO DERECHA -->
+      <div class="consultation-info">
+        <p class="consultation-subtitle">Free Consultation</p>
+        <h2 class="consultation-title">Get An Appointment For Get Release.</h2>
+        <p class="consultation-description">
+          Departure so attention pronounce satisfied daughters am. But shy tedious pressed studied opinion entered windows off. Advantage dependent suspicion convinced provision him yet. Timed balls match at by rooms we.
+        </p>
+
+        <div class="consultation-features">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+            <p>Appointment</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-user-md"></i></div>
+            <p>Select Doctor</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+            <p>Consultation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section">
+    <div class="container testimonials-container">
+        <div class="testimonial-left">
+            <h2 class="section-title">What People Say?</h2>
+            <p class="testimonial-summary">Power dried her taken place day ought the. Four and our ham west miss. Education shameless who middleton agreement how. We in found world chief is at means weeks smile.</p>
+            <div class="button-wrapper"> <a href="#" class="btn btn-secondary-new">VIEW ALL <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+      <div class="testimonial-right">
+        <div class="testimonial-slider-wrapper">
+          <div class="testimonial-slide active" data-testimonial="1">
+            <div class="testimonial-content">
+              <h3 class="testimonial-title">Exceptional Care</h3>
+              <p class="testimonial-description">Board certification is one of the most important factors to consider.</p>
+              <hr class="testimonial-divider">
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="./assets/images/op1.avif" alt="Jessika Jones">
+                </div>
+                <div class="author-info">
+                  <h4 class="author-name">Jessika Jones</h4>
+                  <p class="author-specialty">HEART SPECIALIST</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide" data-testimonial="2">
+            <div class="testimonial-content">
+              <h3 class="testimonial-title">Truly Caring</h3>
+              <p class="testimonial-description">The care I received was exceptional. The doctors were knowledgeable and took the time to explain everything. I felt very comfortable and well-informed throughout my treatment.</p>
+              <hr class="testimonial-divider">
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="./assets/images/op2.avif" alt="John Doe">
+                </div>
+                <div class="author-info">
+                  <h4 class="author-name">John Doe</h4>
+                  <p class="author-specialty">HAPPY PATIENT</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide" data-testimonial="3">
+            <div class="testimonial-content">
+              <h3 class="testimonial-title">Outstanding Service</h3>
+              <p class="testimonial-description">I highly recommend this hospital. The staff is friendly, professional, and the facilities are top-notch. My recovery was smooth, and I am very grateful for the care I received.</p>
+              <hr class="testimonial-divider">
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="./assets/images/op3.avif" alt="Jane Smith">
+                </div>
+                <div class="author-info">
+                  <h4 class="author-name">Jane Smith</h4>
+                  <p class="author-specialty">RECOVERED PATIENT</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-navigation custom-diamond-nav">
+          <button class="nav-dot active" data-slide="1" aria-label="Go to slide 1"></button>
+          <button class="nav-dot" data-slide="2" aria-label="Go to slide 2"></button>
+          <button class="nav-dot" data-slide="3" aria-label="Go to slide 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-content">
+        <div class="footer-column about-col">
+            <h4 class="footer-heading">About Us</h4>
+            <p class="footer-description">
+                Required honoured trifling eat pleasure man relation. Assurance yet bed was improving furniture man. Distrusts delighted
+            </p>
+            <a href="#" class="btn-blood-bank">+ BLOOD BANK</a>
+            <div class="social-icons">
+                <h5 class="get-us-heading">Get Us:</h5>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4 class="footer-heading">Department</h4>
+            <ul class="footer-links">
+                <li><a href="#">Medecine and Health</a></li>
+                <li><a href="#">Dental Care</a></li>
+                <li><a href="#">Eye Treatment</a></li>
+                <li><a href="#">Children Care</a></li>
+                <li><a href="#">Traumatology</a></li>
+                <li><a href="#">X-ray</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4 class="footer-heading">Usefull Links</h4>
+            <ul class="footer-links">
+                <li><a href="#">Ambulance</a></li>
+                <li><a href="#">Emergency</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column branches-col">
+            <h4 class="footer-heading">Our Branches</h4>
+            <div class="branch-item">
+                <p class="branch-name">ACMH Hospital:</p>
+                <p class="branch-address">4992 Bryan Avenue, Prior Lake, Minnesota</p>
+                <p class="branch-phone">Phone: 651-379-4698</p>
+            </div>
+            <div class="branch-item">
+                <p class="branch-name">Central Hospital:</p>
+                <p class="branch-address">2001 Kia Magentis, Prior Lake, Minnesota</p>
+                <p class="branch-phone">Phone: 651-379-4698</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container footer-bottom-content">
+            <p class="copyright">&copy; 2020 Clinicom. All Rights Reserved by <a href="#" target="_blank">validtemplates</a></p>
+            <ul class="bottom-links">
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module" src="assets/js/components/departmentsV2.js"></script>
+
+    </body>
+    </html>

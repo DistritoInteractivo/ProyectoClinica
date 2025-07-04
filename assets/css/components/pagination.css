@@ -1,0 +1,84 @@
+/* assets/css/components/pagination.css */
+
+/* Variables (asegúrate de que estén definidas en tu archivo principal o aquí si es solo para esta sección) */
+:root {
+    --primary-teal: #00A79D;
+    --dark-blue: #0F2139;
+    --text-dark: #333;
+    --text-light: #fff;
+    --grey-light: #f4f4f4;
+    --border-light: #eee;
+    --transition-speed: 0.3s;
+    --very-light-grey: #f9f9f9;
+}
+
+/* ===== PAGINATION SECTION STYLES ===== */
+.pagination-section {
+    padding: 60px 0 100px 0; /* Un poco más de padding inferior si no hay footer directo */
+    background-color: var(--very-light-grey); /* Mismo fondo que la sección del blog */
+    text-align: center; /* Centra los controles de paginación */
+}
+
+.pagination-controls {
+    display: inline-flex; /* Usa flexbox para alinear los botones horizontalmente */
+    gap: 15px; /* Espacio entre los botones */
+    margin-top: 40px; /* Espacio superior para separarlo del blog */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas muy pequeñas */
+    justify-content: center; /* Centra los botones si se envuelven */
+}
+
+.pagination-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Ancho fijo para los botones */
+    height: 50px; /* Alto fijo para los botones */
+    background-color: var(--text-light); /* Fondo blanco */
+    border: 1px solid var(--border-light); /* Borde claro */
+    border-radius: 8px; /* Bordes redondeados */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-teal); /* Color teal para el texto/icono */
+    transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
+}
+
+.pagination-btn:hover {
+    background-color: var(--primary-teal);
+    color: var(--text-light);
+    border-color: var(--primary-teal);
+}
+
+.pagination-btn.active {
+    background-color: var(--primary-teal);
+    color: var(--text-light);
+    border-color: var(--primary-teal);
+    cursor: default; /* Cambia el cursor para la página activa */
+}
+
+.pagination-btn.active:hover {
+    /* No cambia el estilo al hacer hover en el botón activo */
+    background-color: var(--primary-teal);
+    color: var(--text-light);
+}
+
+.pagination-btn .fas {
+    font-size: 0.9rem; /* Tamaño del icono */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 576px) {
+    .pagination-section {
+        padding: 40px 0 80px 0;
+    }
+
+    .pagination-controls {
+        gap: 10px; /* Reduce el espacio entre botones en pantallas pequeñas */
+    }
+
+    .pagination-btn {
+        width: 45px; /* Ligeramente más pequeños en móviles */
+        height: 45px;
+        font-size: 0.9rem;
+    }
+}

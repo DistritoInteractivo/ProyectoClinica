@@ -1,0 +1,234 @@
+/* assets/css/style.css o assets/css/components/hero.css */
+
+/* Variables (asegúrate de que estén definidas en :root en style.css si no las tienes) */
+:root {
+    --dark-blue: #0F2139; /* Asegúrate que esta variable exista */
+    --primary-teal: #00A79D;
+    --text-dark: #333; /* Asegúrate que esta variable exista */
+    --text-light: #fff;
+    --grey-light: #f4f4f4; /* Asegúrate que esta variable exista */
+    --border-light: #eee; /* Asegúrate que esta variable exista */
+    --transition-speed: 0.3s;
+}
+
+/* ===== HERO SECTION STYLES ===== */
+
+/* Capa oscura semitransparente sobre la imagen de fondo */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .hero-slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+
+  .hero-slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .hero-text {
+    max-width: 550px;
+    color: var(--text-light);
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .separator {
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-teal);
+    margin: 0 1rem;
+  }
+
+  /* Botón cuadrado */
+  .btn-primary-hero {
+    display: inline-block;
+    background-color: var(--primary-teal);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border: 2px solid var(--primary-teal);
+  }
+
+  .btn-primary-hero:hover {
+    background-color: transparent;
+    color: var(--primary-teal);
+  }
+
+  /* Paginación del slider (DOTS alineados a la orilla derecha) */
+  .hero-pagination {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+  }
+
+  .pagination-dot {
+    width: 18px;
+    height: 18px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  .pagination-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+  }
+
+  .pagination-dot.active::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @media (max-width: 768px) {
+    .hero-title { font-size: 2.5rem; }
+    .hero-subtitle { font-size: 0.85rem; }
+    .btn-primary-hero { padding: 0.8rem 1.8rem; }
+    .hero-pagination {
+      right: 10px;
+      top: auto;
+      bottom: 20px;
+      flex-direction: row;
+    }
+  }
+
+
+/* ===== RESPONSIVE STYLES FOR HERO SECTION ===== */
+@media (max-width: 992px) {
+    .hero-section {
+        height: 60vh; /* Un poco menos de altura en tablets/móviles */
+        background-position: 70% center; /* Ajusta el fondo para pantallas más pequeñas */
+    }
+
+    .hero-content {
+        flex-direction: column; /* Apila el texto y la paginación */
+        justify-content: center; /* Centra el contenido verticalmente */
+        align-items: center; /* Centra el contenido horizontalmente */
+        text-align: center; /* Centra el texto */
+        padding: 0 20px; /* Asegura un padding horizontal adecuado en móvil */
+    }
+
+    .hero-text {
+        max-width: 90%; /* Usa más ancho en pantallas pequeñas */
+        padding-left: 0; /* Elimina el padding izquierdo específico de desktop */
+        padding-right: 0;
+    }
+
+    .hero-title {
+        font-size: 3rem; /* Reduce el tamaño del título */
+    }
+
+    .hero-subtitle {
+        justify-content: center; /* Centra la subtítulo con el separador */
+    }
+
+    .hero-pagination {
+        flex-direction: row; /* Puntos en fila en móvil */
+        margin-top: 2rem; /* Espacio sobre los puntos */
+        align-items: center;
+        padding-right: 0; /* Elimina el padding derecho específico de desktop */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 50vh; /* Aún menos altura en móviles pequeños */
+    }
+
+    .hero-title {
+        font-size: 2.5rem; /* Reduce el tamaño del título aún más */
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .btn-primary-hero {
+        padding: 0.8rem 2rem; /* Botón un poco más pequeño */
+    }
+}
+
+/* Para pantallas muy pequeñas, ajusta aún más si es necesario */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+    .hero-subtitle .separator {
+        width: 20px;
+        margin: 0 0.8rem;
+    }
+    .btn-primary-hero {
+        padding: 0.7rem 1.8rem;
+        font-size: 0.9rem;
+    }
+}

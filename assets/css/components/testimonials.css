@@ -1,0 +1,369 @@
+/* assets/css/components/testimonials.css */
+
+:root {
+    --primary-teal: #00A79D;
+    --dark-blue: #0F2139;
+    --text-dark: #333;
+    --text-light: #fff;
+    --grey-light: #f4f4f4;
+    --border-light: #eee;
+    --transition-speed: 0.3s;
+    --very-light-grey: #f9f9f9;
+}
+
+/* ===== TESTIMONIALS SECTION STYLES ===== */
+.testimonials-section {
+    padding: 80px 0;
+    background-color: var(--text-light); /* Fondo blanco */
+}
+
+.testimonials-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Espacio en los lados para contenedores más pequeños */
+    flex-wrap: wrap; /* Para que se apilen en pantallas pequeñas */
+}
+
+.testimonial-left {
+    flex: 1 1 350px; /* Ocupa espacio, con un ancho base */
+    display: flex; /* Añadido para controlar el layout interno y centrar el botón */
+    flex-direction: column;
+    /* justify-content: center; /* Si quieres centrar todo el contenido verticalmente */
+    /* align-items: center; /* Si quieres centrar todo el contenido horizontalmente */
+}
+
+.testimonial-right {
+    flex: 1 1 500px; /* Ocupa espacio, con un ancho base */
+    background-color: var(--very-light-grey);
+    padding: 40px; /* Ajustado para el nuevo contenido */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative; /* Necesario para los slides y el quote-icon */
+    min-height: 400px; /* Asegura una altura mínima para el contenedor del slide */
+    display: flex; /* Para controlar el padding y el contenido */
+    flex-direction: column;
+    justify-content: space-between; /* Empuja la navegación hacia abajo */
+}
+
+.testimonial-summary {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.testimonial-slider-wrapper {
+    overflow: hidden;
+    position: relative; /* Para posicionar los slides absolutamente */
+    flex-grow: 1; /* Permite que ocupe el espacio disponible */
+}
+
+.testimonial-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* opacity: 0; -- ELIMINADO para la primera tarjeta para que se vea inicialmente -- */
+    /* visibility: hidden; -- ELIMINADO también -- */
+    transition: opacity 0.6s ease, visibility 0s linear 0.6s;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente si el slide es más bajo */
+}
+
+.testimonial-slide:not(.active) { /* Añadido para aplicar a los que NO están activos */
+    opacity: 0;
+    visibility: hidden;
+}
+
+.testimonial-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.testimonial-content {
+    background-color: var(--very-light-grey); /* Se mantiene el fondo del contenedor principal */
+    padding: 20px 0 0 0; /* Padding interno para el contenido, ajusta según necesidad */
+    width: 100%;
+    height: 100%; /* El contenido debe ocupar todo el slide */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el autor al final */
+    position: relative; /* Necesario para el icono de cita dentro de content */
+}
+
+/* Quote Icon: Reubicado para estar dentro de testimonial-content y flotar */
+.quote-icon {
+    font-size: 3rem;
+    color: var(--primary-teal);
+    position: absolute;
+    top: 0px; /* Ajusta la posición superior según el diseño */
+    left: 0px; /* Ajusta la posición izquierda según el diseño */
+    z-index: 1;
+    opacity: 0.2; /* Ligeramente transparente para un efecto más sutil */
+}
+
+.testimonial-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+    padding-left: 60px; /* Deja espacio para el quote icon si está flotando */
+    position: relative;
+    z-index: 2;
+    text-align: left; /* Asegúrate de que el título esté alineado a la izquierda */
+}
+
+.testimonial-description {
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    padding-left: 60px; /* Deja espacio para el quote icon */
+    position: relative;
+    z-index: 2;
+    text-align: left; /* Asegúrate de que la descripción esté alineada a la izquierda */
+}
+
+.testimonial-divider {
+    border: 0;
+    border-top: 1px solid var(--border-light);
+    margin: 20px 0;
+    width: calc(100% - 60px); /* Ajusta el ancho si hay padding-left */
+    margin-left: 60px; /* Alinea con el texto */
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 60px; /* Alinea con el texto */
+    text-align: left; /* Asegúrate de que la información del autor esté alineada a la izquierda */
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+.author-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-info {
+    text-align: left;
+}
+
+.author-name {
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.author-specialty {
+    font-size: 0.8rem;
+    color: var(--primary-teal);
+}
+
+/* TESTIMONIAL NAVIGATION (Diamond shape) */
+.testimonial-navigation.custom-diamond-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 16px;
+}
+
+.custom-diamond-nav .nav-dot {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid var(--text-dark);
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+}
+
+.custom-diamond-nav .nav-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: var(--text-dark);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: background-color 0.3s ease;
+}
+
+.custom-diamond-nav .nav-dot.active {
+    border-color: var(--primary-teal);
+}
+
+.custom-diamond-nav .nav-dot.active::after {
+    background-color: var(--primary-teal);
+}
+
+.custom-diamond-nav .nav-dot:hover {
+    border-color: var(--primary-teal);
+}
+
+.custom-diamond-nav .nav-dot:hover::after {
+    background-color: var(--primary-teal);
+}
+
+/* Botón "VIEW ALL" (btn-secondary-new) */
+.btn-secondary-new {
+    display: inline-flex; /* Cambiado a inline-flex para centrar mejor el contenido interno */
+    background-color: var(--primary-teal);
+    color: var(--text-light);
+    border: 2px solid var(--primary-teal);
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    align-items: center;
+    justify-content: center; /* Centra el texto y el icono dentro del botón */
+    gap: 8px;
+}
+
+.btn-secondary-new:hover {
+    background-color: transparent;
+    color: var(--primary-teal);
+    border-color: var(--primary-teal);
+}
+
+/* Contenedor para centrar el botón */
+.button-wrapper {
+    display: flex; /* Usa flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    margin-top: 30px; /* Espacio superior para separar del summary */
+    width: 100%; /* Ocupa todo el ancho disponible en testimonial-left */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .testimonials-container {
+        flex-direction: column;
+        text-align: center; /* Centra el texto del lado izquierdo */
+    }
+
+    .testimonial-left {
+        margin-bottom: 40px;
+        /* text-align: center; -- Ya lo maneja el testimonial-container, si no se desea, se puede añadir aquí -- */
+        align-items: center; /* Centra los elementos del testimonial-left horizontalmente */
+    }
+
+    .testimonial-right {
+        padding: 30px;
+        min-height: auto;
+    }
+
+    .testimonial-content {
+        padding: 20px 0 0 0;
+    }
+
+    .quote-icon {
+        font-size: 2.8rem;
+        top: 15px;
+        left: 15px;
+    }
+
+    .testimonial-title,
+    .testimonial-description,
+    .testimonial-author,
+    .testimonial-divider {
+        padding-left: 45px;
+        text-align: left;
+        width: calc(100% - 45px);
+        margin-left: 45px;
+    }
+
+    .testimonial-author {
+        justify-content: flex-start;
+    }
+
+    .button-wrapper {
+        justify-content: center; /* Asegura el centrado del botón en responsive */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 60px 0;
+    }
+
+    .testimonial-right {
+        padding: 25px;
+    }
+
+    .quote-icon {
+        font-size: 2.2rem;
+        top: 10px;
+        left: 10px;
+    }
+
+    .testimonial-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        padding-left: 35px;
+    }
+
+    .testimonial-description {
+        font-size: 0.95rem;
+        padding-left: 35px;
+        margin-bottom: 15px;
+    }
+
+    .testimonial-divider {
+        width: calc(100% - 35px);
+        margin-left: 35px;
+        margin: 15px 0;
+    }
+
+    .testimonial-author {
+        padding-left: 35px;
+        gap: 15px;
+    }
+
+    .author-image {
+        width: 45px;
+        height: 45px;
+    }
+
+    .author-name {
+        font-size: 1rem;
+    }
+
+    .author-specialty {
+        font-size: 0.75rem;
+    }
+
+    .custom-diamond-nav .nav-dot {
+        width: 16px;
+        height: 16px;
+        border-width: 1px;
+    }
+    .custom-diamond-nav .nav-dot::after {
+        width: 5px;
+        height: 5px;
+    }
+    .custom-diamond-nav {
+        margin-top: 30px;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,380 @@
+/* Estilos para el componente Header */
+
+/* -- VARIABLES -- (Idealmente en style.css) */
+:root {
+    --dark-blue: #0F2139;
+    --primary-teal: #00A79D;
+    --text-dark: #333;
+    --text-light: #fff;
+    --grey-light: #f4f4f4;
+    --border-light: #eee; /* Nueva variable para bordes claros */
+    --transition-speed: 0.3s; /* Variable para la velocidad de las transiciones */
+}
+
+/* ===== BASE HEADER STYLES ===== */
+.site-header {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    position: relative; /* Importante para el posicionamiento absoluto del menú móvil */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* Considera una altura mínima para el contenedor principal del nav si tu logo es alto */
+}
+
+/* ===== TOP BAR STYLES ===== */
+.top-bar {
+    background-color: var(--dark-blue);
+    color: var(--text-light);
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador sutil */
+}
+
+.top-bar .container {
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas muy pequeñas */
+    min-height: auto; /* Asegura que no haya una altura fija que rompa el layout */
+}
+
+.contact-info {
+    display: flex; /* Para alinear íconos y texto */
+    align-items: center;
+}
+
+.contact-info span {
+    margin-right: 2rem;
+    white-space: nowrap; /* Evita que el texto se rompa en líneas */
+}
+
+.contact-info i {
+    color: var(--primary-teal);
+    margin-right: 0.5rem;
+}
+
+.top-bar .btn-primary {
+    background: transparent;
+    border: 2px solid var(--primary-teal);
+    color: var(--text-light);
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.top-bar .btn-primary:hover {
+    background-color: var(--primary-teal);
+    color: var(--text-light);
+}
+
+/* ===== MAIN NAVIGATION BAR STYLES ===== */
+.main-nav-bar {
+    background-color: #fff;
+    padding: 0.5rem 0;
+}
+
+.main-nav-bar .container {
+    padding: 15px 20px; /* Asegura padding consistente */
+}
+
+.logo img {
+    height: 40px; /* Ajusta según el tamaño de tu logo */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox para elementos de menú en línea en desktop */
+    align-items: center;
+}
+
+.main-nav li {
+    position: relative; /* Necesario para el posicionamiento de los dropdowns */
+    margin-left: 30px; /* Espaciado entre elementos del menú principal */
+}
+
+.main-nav .nav-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1.5rem 1rem;
+    display: block;
+    position: relative;
+    transition: color var(--transition-speed);
+}
+
+.main-nav .nav-link:hover {
+    color: var(--primary-teal);
+}
+
+.main-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background-color: var(--primary-teal);
+    border-radius: 2px;
+}
+
+/* Base para la flecha, transición y visibilidad por defecto (desktop) */
+.nav-link .fa-chevron-down {
+    font-size: 0.7rem;
+    margin-left: 0.3rem;
+    transition: transform var(--transition-speed); /* Transición para la rotación de la flecha */
+    display: inline-block; /* Asegura que la flecha sea visible en desktop por defecto */
+}
+
+/* Estilos para los submenús (Dropdowns) - REGLAS BASE (APLICAN A AMBAS VERSIONES, LUEGO SOBREESCRITAS POR MEDIA QUERIES) */
+.dropdown-menu {
+    position: absolute; /* Posicionamiento absoluto para desktop */
+    top: 100%; /* Posiciona debajo del elemento padre (li.has-dropdown) */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 180px;
+    border-radius: 5px;
+    /* Oculto por defecto en desktop y para la transición */
+    display: none; /* Asegura que no ocupe espacio */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-speed) ease, visibility var(--transition-speed) ease;
+    z-index: 1001; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Mostrar dropdown y rotar flecha al pasar el ratón en desktop */
+.has-dropdown:hover > .dropdown-menu {
+    display: block; /* Muestra el dropdown */
+    opacity: 1;
+    visibility: visible;
+}
+
+.has-dropdown:hover > .nav-link .fa-chevron-down {
+    transform: rotate(180deg); /* Rota la flecha al abrir el dropdown */
+}
+
+.dropdown-menu li {
+    margin: 0; /* Anula el margin-left de .main-nav li */
+}
+
+.dropdown-menu a {
+    color: var(--text-dark);
+    padding: 8px 20px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--primary-teal);
+    color: var(--text-light);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-btn, .mobile-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-left: 1rem;
+    transition: color var(--transition-speed);
+}
+
+.search-btn:hover, .mobile-menu-btn:hover {
+    color: var(--primary-teal);
+}
+
+.mobile-menu-btn {
+    display: none; /* Oculto en escritorio por defecto */
+}
+
+
+/* ===== RESPONSIVE DESIGN (Media Queries) ===== */
+
+/* Estilos para Tablets y pantallas pequeñas (Móvil First Approach con Desktop Overrides) */
+@media (max-width: 992px) {
+    .top-bar {
+        display: none; /* Ocultamos la top bar en móviles para ahorrar espacio */
+    }
+
+    .main-nav-bar .container {
+        padding: 10px 20px; /* Ajusta el padding del nav bar en móvil */
+    }
+
+    .logo img {
+        height: 40px; /* Logo más pequeño en móviles */
+    }
+
+    /* Mostrar el botón de hamburguesa */
+    .mobile-menu-btn {
+        display: block;
+        font-size: 1.5rem; /* Icono más grande para tocar fácilmente */
+    }
+
+    /* Ocultar la navegación principal por defecto en móviles */
+    .main-nav {
+        position: absolute;
+        top: 100%; /* Posiciona debajo del header */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        padding: 1rem 0;
+        border-top: 1px solid var(--border-light);
+        flex-direction: column; /* Apila los elementos del menú */
+        align-items: flex-start; /* Alinea los ítems a la izquierda */
+
+        /* Propiedades para la transición de aparición/desaparición del menú principal */
+        display: flex; /* Para que flex-direction y otras propiedades de flexbox funcionen */
+        max-height: 0; /* Ocultar con altura 0 para una transición suave */
+        overflow: hidden; /* Oculta el contenido desbordado */
+        opacity: 0; /* Ocultar con opacidad */
+        visibility: hidden; /* Ocultar para lectores de pantalla */
+        transition: max-height 0.4s ease-out, opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    /* Clase para mostrar el menú principal cuando está activo por JS */
+    .main-nav.is-active {
+        max-height: 500px; /* Suficiente altura para mostrar todo el menú. Ajusta según sea necesario. */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Apila los ítems del menú principal */
+        width: 100%;
+    }
+
+    .main-nav li {
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid var(--grey-light); /* Separador para ítems de menú */
+    }
+    .main-nav li:last-child {
+        border-bottom: none; /* Quita el borde del último elemento */
+    }
+
+    .main-nav .nav-link {
+        padding: 15px 20px; /* Más padding para facilitar el toque */
+        text-align: left; /* Alinea el texto a la izquierda en móvil */
+        width: 100%;
+    }
+
+    .main-nav .nav-link.active::after {
+        width: 40px; /* Ancho fijo para el subrayado activo en móvil */
+        height: 2px; /* Más sutil en móvil */
+        bottom: 5px; /* Ajusta la posición */
+        left: 20px; /* Alineado a la izquierda */
+        transform: translateX(0); /* Reinicia transformación */
+    }
+
+    /* Modificación de la flecha de los dropdowns en móvil */
+    .nav-link .fa-chevron-down {
+        display: inline-block; /* Asegura que la flecha sea visible en móvil (ya está en la base, pero lo reafirmo) */
+        margin-left: 0.5rem; /* Ajuste de espacio en móvil */
+    }
+
+    /* Rotar la flecha cuando el dropdown móvil está activo por JS */
+    .has-dropdown .nav-link .fa-chevron-down.rotated {
+        transform: rotate(180deg);
+    }
+
+    /* --- Submenús en Móviles (activados por JS con clase .active en .has-dropdown) --- */
+    .dropdown-menu {
+        position: static; /* Elimina el posicionamiento absoluto en móvil, crucial para el flujo */
+        box-shadow: none; /* Sin sombra en el submenú móvil */
+        border-radius: 0;
+        background-color: var(--grey-light); /* Un fondo diferente para el submenú */
+        padding: 0; /* padding se controlará con el li > a */
+        min-width: auto; /* Anula el min-width */
+        width: 100%;
+        /* Ocultar con altura 0 y transición suave para móvil */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 1; /* Mantener la opacidad en 1, el control es por max-height */
+        visibility: visible; /* Mantener la visibilidad */
+        transition: max-height 0.3s ease-out; /* Transición para la altura */
+        display: block; /* Para que la transición max-height funcione */
+    }
+
+    /* Clase para mostrar el submenú activo en móvil (agregada por JS) */
+    .has-dropdown.active .dropdown-menu {
+        max-height: 300px; /* Suficiente altura para mostrar el submenú. Ajustar si es necesario. */
+        /* opacity y visibility no cambian, se controlan por max-height */
+    }
+
+    .dropdown-menu li {
+        border-bottom: 1px solid var(--border-light); /* Separador para ítems de submenú */
+    }
+    .dropdown-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-menu a {
+        padding: 10px 40px; /* Padding y sangría para ítems de submenú */
+        font-size: 0.9rem;
+    }
+
+    .search-btn {
+        display: block; /* Considera si quieres el botón de búsqueda visible o dentro del menú */
+    }
+}
+
+/* Pantallas grandes y desktops (asegurar estilos de escritorio - anulando los de móvil si es necesario) */
+@media (min-width: 993px) {
+    .mobile-menu-btn {
+        display: none !important; /* Asegura que el botón de hamburguesa esté oculto en desktop */
+    }
+
+    .main-nav {
+        display: flex !important; /* Asegura que el menú esté visible en desktop como flex */
+        position: static !important; /* Resetea el posicionamiento */
+        box-shadow: none !important; /* Elimina la sombra de menú móvil */
+        padding: 0 !important; /* Restablece el padding */
+        border: none !important; /* Elimina el borde superior */
+        max-height: initial !important; /* Asegura que la altura no esté restringida */
+        opacity: 1 !important;
+        visibility: visible !important;
+        overflow: visible !important; /* Asegura que los dropdowns se vean */
+    }
+
+    .main-nav ul {
+        flex-direction: row !important; /* Asegura que los ítems estén en fila */
+        width: auto !important; /* Resetea el ancho a auto */
+    }
+
+    .main-nav li {
+        border-bottom: none !important; /* Quita el borde de los ítems */
+    }
+
+    /* Submenús en desktop: Asegurarse que están ocultos por defecto y se abren con hover */
+
+    .dropdown-menu {
+        max-height: initial !important;
+        overflow: visible !important;
+        padding: 10px 0 !important;
+        position: absolute !important;
+            /* No display, opacity ni visibility aquí */
+        }
+      }
+
+
+    /* Vuelve a mostrar la flecha en desktop (aunque ya está en la base, el !important asegura) */
+    .nav-link .fa-chevron-down {
+        display: inline-block !important;
+    }
+

@@ -1,0 +1,214 @@
+/* assets/css/components/info-cards.css */
+
+:root {
+    --primary-teal: #00A79D;
+    --dark-blue: #0F2139;
+    --text-dark: #333;
+    --text-light: #fff;
+    --grey-light: #f4f4f4;
+    --border-light: #eee;
+    --transition-speed: 0.3s;
+    --very-light-grey: #f9f9f9;
+    --light-blue-icon-bg: rgba(0, 167, 157, 0.1); /* Un teal muy claro para el fondo del círculo del icono */
+    --light-blue-icon-border: rgba(0, 167, 157, 0.2); /* Borde un poco más oscuro para el círculo del icono */
+}
+
+/* ===== INFO CARDS SECTION STYLES ===== */
+.info-cards-section {
+    padding: 100px 0;
+    background-color: var(--very-light-grey); /* Fondo gris claro */
+}
+
+.info-cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+
+  .info-card {
+    flex: 1;
+    position: relative;
+    background-color: var(--text-light);
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 40px 30px;
+    text-align: center;
+    border: 2px solid var(--primary-teal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-card-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--primary-teal);
+    border-radius: 8px;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+.info-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-teal); /* Borde se vuelve teal al pasar el ratón */
+}
+
+.info-card-icon-wrapper {
+    width: 90px;
+    height: 90px;
+    background-color: var(--light-blue-icon-bg); /* Fondo azul claro */
+    border: 1px solid var(--light-blue-icon-border); /* Borde azul claro */
+    border-radius: 50%; /* Círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.info-card-icon-wrapper i {
+    font-size: 3rem; /* Tamaño del icono */
+    color: var(--primary-teal); /* Color teal del icono */
+}
+
+.info-card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+}
+
+.info-card-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 30px;
+    flex-grow: 1; /* Permite que la descripción empuje el botón hacia abajo */
+}
+
+/* Estilos específicos para la tarjeta de horarios */
+.info-card-hours .opening-hours-details {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: left; /* Alinea el texto de los horarios a la izquierda */
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 0; /* No tiene botón, así que no necesita el margen inferior */
+    flex-grow: 1; /* También lo empuja para llenar el espacio */
+}
+
+.info-card-hours .opening-hours-details p {
+    display: flex;
+    justify-content: space-between; /* Alinea el día a la izquierda y la hora a la derecha */
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--border-light); /* Línea punteada */
+}
+
+.info-card-hours .opening-hours-details p:last-child {
+    border-bottom: none; /* No hay línea punteada en el último elemento */
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-card-hours .opening-hours-details p span {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.info-card-hours .opening-hours-details .status-closed {
+    background-color: var(--primary-teal); /* Fondo teal para "Closed" */
+    color: var(--text-light); /* Texto blanco */
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.btn-info-rounded {
+    background-color: var(--primary-teal);
+    color: var(--text-light);
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  }
+
+  .btn-info-rounded:hover {
+    background-color: transparent;
+    color: var(--primary-teal);
+    border: 2px solid var(--primary-teal);
+  }
+
+.btn-info-card-read-more {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 1px solid var(--border-light); /* Borde claro */
+    border-radius: 5px;
+    color: var(--text-dark); /* Texto oscuro */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-info-card-read-more:hover {
+    background-color: var(--primary-teal); /* Fondo teal al pasar el ratón */
+    color: var(--text-light); /* Texto blanco */
+    border-color: var(--primary-teal);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .info-card {
+        flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .info-cards-section {
+        padding: 80px 0;
+    }
+    .info-card {
+        flex: 1 1 100%; /* Una columna en móviles */
+        max-width: 400px; /* Limita el ancho en el centro */
+    }
+    .info-card-title {
+        font-size: 1.4rem;
+    }
+    .info-card-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-cards-section {
+        padding: 60px 0;
+    }
+    .info-card {
+        padding: 30px 20px;
+    }
+    .info-card-icon-wrapper {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+    .info-card-icon-wrapper i {
+        font-size: 2.5rem;
+    }
+    .info-card-title {
+        font-size: 1.3rem;
+    }
+    .info-card-description {
+        font-size: 0.9rem;
+    }
+    .btn-info-card-read-more {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+}

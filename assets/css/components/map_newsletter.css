@@ -1,0 +1,185 @@
+/* assets/css/components/map_newsletter.css */
+
+:root {
+    --primary-teal: #00A79D;
+    --dark-blue: #0F2139;
+    --text-dark: #333;
+    --text-light: #fff;
+    --grey-light: #f4f4f4;
+    --border-light: #eee;
+    --transition-speed: 0.3s;
+    --very-light-grey: #f9f9f9;
+}
+
+/* ===== MAP & NEWSLETTER SECTION STYLES ===== */
+.map-newsletter-section {
+    position: relative; /* Para posicionar el newsletter encima del mapa */
+    height: 500px; /* Altura de la sección, ajusta según sea necesario */
+    overflow: hidden; /* Asegura que nada se salga del contenedor */
+}
+
+.google-map {
+    width: 100%;
+    height: 100%;
+    /* Si usas el div vacío para la API, aquí irían sus estilos */
+}
+
+.google-map-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block; /* Elimina espacio extra debajo del iframe */
+}
+
+.newsletter-overlay {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrado perfecto */
+    z-index: 10; /* Asegura que esté por encima del mapa */
+    background-color: var(--primary-teal);
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: var(--text-light);
+    max-width: 600px; /* Ancho máximo del overlay */
+    width: 90%; /* Ancho responsivo */
+}
+
+.newsletter-title {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.newsletter-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacio entre input y botón */
+    flex-wrap: wrap; /* Permite que el input y botón se apilen en móviles */
+}
+
+.newsletter-input {
+    flex: 1 1 250px; /* Crece y se encoge, con un ancho base */
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px; /* Bordes redondeados como en la imagen */
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    color: var(--dark-blue);
+    outline: none;
+    transition: all var(--transition-speed) ease;
+}
+
+.newsletter-input::placeholder {
+    color: #888;
+}
+
+.newsletter-input:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Sombra al enfocar */
+}
+
+.newsletter-button {
+    background-color: var(--dark-blue); /* Botón azul oscuro */
+    color: var(--text-light);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.newsletter-button:hover {
+    background-color: var(--primary-teal); /* Cambia a teal al hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary-new {
+    display: inline-flex; /* Cambiado a inline-flex para centrar mejor el contenido interno */
+    background-color: #fff;
+    color: #00A79D;
+    border: 2px solid var(--primary-teal);
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    align-items: center;
+    justify-content: center; /* Centra el texto y el icono dentro del botón */
+    gap: 8px;
+}
+
+.btn-secondary-new:hover {
+    background-color: transparent;
+    color: var(--primary-teal);
+    border-color: var(--primary-teal);
+}
+
+/* Contenedor para centrar el botón */
+.button-wrapper {
+    display: flex; /* Usa flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    margin-top: 30px; /* Espacio superior para separar del summary */
+    width: 100%; /* Ocupa todo el ancho disponible en testimonial-left */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .map-newsletter-section {
+        height: 400px; /* Altura menor en móviles */
+    }
+
+    .newsletter-overlay {
+        padding: 30px 20px;
+        width: 95%; /* Un poco más de ancho en móviles */
+    }
+
+    .newsletter-title {
+        font-size: 1.8rem;
+    }
+
+    .newsletter-subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .newsletter-form {
+        flex-direction: column; /* Apila el input y el botón */
+        gap: 10px;
+    }
+
+    .newsletter-input,
+    .newsletter-button {
+        width: 100%; /* Ocupan todo el ancho disponible */
+        flex: none; /* Elimina la flexibilidad para que tomen el 100% */
+    }
+}
+
+@media (max-width: 480px) {
+    .newsletter-overlay {
+        padding: 25px 15px;
+    }
+
+    .newsletter-title {
+        font-size: 1.5rem;
+    }
+
+    .newsletter-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .newsletter-input,
+    .newsletter-button {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+    }
+}

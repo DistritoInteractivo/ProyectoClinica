@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinicom - Tu Clínica de Confianza</title>
+
+  <!-- Tipografía y FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlroSgJ+6iB9P1z/kQ/T3wN7d1j0U9j6T2GjXgB/N3h+kG8u+a6iP+q6E0A6V8zQ5W+G9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/components/about-us.css" />
+  <link rel="stylesheet" href="assets/css/components/header.css" />
+  <link rel="stylesheet" href="assets/css/components/heroV2.css">
+  <link rel="stylesheet" href="assets/css/components/about-content.css" />
+  <link rel="stylesheet" href="assets/css/components/appointment.css" />
+  <link rel="stylesheet" href="assets/css/components/info-cards.css">
+  <link rel="stylesheet" href="assets/css/components/facts-counter.css">
+  <link rel="stylesheet" href="assets/css/components/stats.css" />
+  <link rel="stylesheet" href="assets/css/components/blog.css" />
+  <link rel="stylesheet" href="assets/css/components/doctors.css" />
+  <link rel="stylesheet" href="assets/css/components/testimonials.css" />
+  <link rel="stylesheet" href="assets/css/components/map_newsletter.css" />
+  <link rel="stylesheet" href="assets/css/components/footer.css" />
+  <link rel="stylesheet" href="assets/css/components/departmentsV2.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="contact-info">
+          <span><i class="fas fa-map-marker-alt"></i> California, TX 70240</span>
+          <span><i class="fas fa-envelope"></i> info@gmail.com</span>
+          <span><i class="fas fa-phone-alt"></i> +123 456 7890</span>
+        </div>
+        <a href="/appointment" class="btn btn-primary">Make Appointment</a>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <div class="main-nav-bar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="assets/images/logo-clinicom.png" alt="Clinicom Logo" />
+        </a>
+
+        <nav class="main-nav" id="main-navigation">
+          <ul>
+            <li><a href="/" class="nav-link active">HOME</a></li>
+
+            <li class="has-dropdown">
+              <a href="index.html" class="nav-link">PAGES <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="error.html">Error</a></li>
+              </ul>
+            </li>
+
+            <li>
+                <a href="departments.html" class="nav-link">DEPARTMENTS </a>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="/doctors.html" class="nav-link">DOCTORS </a>
+            </li>
+
+            <li>
+                <a href="/blog.html" class="nav-link">BLOG</a>
+              </li>
+
+            <li><a href="/contact" class="nav-link">CONTACT</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-right">
+          <button class="search-btn" aria-label="Buscar"><i class="fas fa-search"></i></button>
+          <button class="mobile-menu-btn" id="mobile-menu-trigger" aria-label="Abrir menú" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero-section" style="background-image: url('assets/images/DOCTORES.avif');">
+    <div class="container page-hero-content">
+        <h1 class="page-hero-title">DOCTORS</h1>
+        <div class="breadcrumb">
+            <a href="index.html" class="breadcrumb-item">HOME</a>
+            <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+            <a href="#" class="breadcrumb-item">PAGES</a>
+            <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+            <span class="breadcrumb-item active">DOCTORS</span>
+        </div>
+    </div>
+</section>
+
+<section class="doctors-section">
+    <div class="container">
+        <h2 class="section-subtitle text-center">DOCTORES</h2>
+        <h3 class="section-title text-center">Our Experts</h3>
+
+        <div class="doctors-carousel-container">
+            <button class="carousel-control prev" aria-label="Previous doctor">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="doctors-carousel">
+                <div class="doctor-card" data-index="3">
+                    <div class="doctor-image">
+                        <img src="./assets/images/d3.png" alt="Dr. Sarah Miller">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Dr. Sarah Miller</h4>
+                        <p class="doctor-specialty">PEDIATRICS</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Mon-Fri: 9:00 - 17:00</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-index="2">
+                    <div class="doctor-image">
+                        <img src="./assets/images/d2.png" alt="Dr. Anam Habu">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Dr. Anam Habu</h4>
+                        <p class="doctor-specialty">CARDIOLOGIST</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Sat-Tue: 10:00 - 16:30</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-index="3">
+                    <div class="doctor-image">
+                        <img src="./assets/images/d4.png" alt="Dr. Sarah Miller">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Dr. Sarah Miller</h4>
+                        <p class="doctor-specialty">PEDIATRICS</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Mon-Fri: 9:00 - 17:00</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-index="4">
+                    <div class="doctor-image">
+                        <img src="./assets/images/d3.png" alt="Dr. David Lee">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Dr. David Lee</h4>
+                        <p class="doctor-specialty">NEUROLOGY</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Tue-Sat: 9:30 - 16:00</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-index="1">
+                    <div class="doctor-image">
+                        <img src="./assets/images/d1.avif" alt="Prof. Jones Athom">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Prof. Jones Athom</h4>
+                        <p class="doctor-specialty">ORTHOPAEDICS</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Sat-Tue: 8:30 - 14:45</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card" data-index="2">
+                    <div class="doctor-image">
+                        <img src="./assets/images/d2.png" alt="Dr. Anam Habu">
+                    </div>
+                    <div class="doctor-info">
+                        <h4 class="doctor-name">Dr. Anam Habu</h4>
+                        <p class="doctor-specialty">CARDIOLOGIST</p>
+                        <div class="visiting-hours">
+                            <strong>Visiting Hours:</strong>
+                            <p>Sat-Tue: 10:00 - 16:30</p>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="#" class="btn btn-primary-alt">APPOINTMENT</a>
+                            <a href="#" class="btn-icon" aria-label="Contact Doctor">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control next" aria-label="Next doctor">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="container footer-content">
+        <div class="footer-column about-col">
+            <h4 class="footer-heading">About Us</h4>
+            <p class="footer-description">
+                Required honoured trifling eat pleasure man relation. Assurance yet bed was improving furniture man. Distrusts delighted
+            </p>
+            <a href="#" class="btn-blood-bank">+ BLOOD BANK</a>
+            <div class="social-icons">
+                <h5 class="get-us-heading">Get Us:</h5>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4 class="footer-heading">Department</h4>
+            <ul class="footer-links">
+                <li><a href="#">Medecine and Health</a></li>
+                <li><a href="#">Dental Care</a></li>
+                <li><a href="#">Eye Treatment</a></li>
+                <li><a href="#">Children Care</a></li>
+                <li><a href="#">Traumatology</a></li>
+                <li><a href="#">X-ray</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4 class="footer-heading">Usefull Links</h4>
+            <ul class="footer-links">
+                <li><a href="#">Ambulance</a></li>
+                <li><a href="#">Emergency</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column branches-col">
+            <h4 class="footer-heading">Our Branches</h4>
+            <div class="branch-item">
+                <p class="branch-name">ACMH Hospital:</p>
+                <p class="branch-address">4992 Bryan Avenue, Prior Lake, Minnesota</p>
+                <p class="branch-phone">Phone: 651-379-4698</p>
+            </div>
+            <div class="branch-item">
+                <p class="branch-name">Central Hospital:</p>
+                <p class="branch-address">2001 Kia Magentis, Prior Lake, Minnesota</p>
+                <p class="branch-phone">Phone: 651-379-4698</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container footer-bottom-content">
+            <p class="copyright">&copy; 2020 Clinicom. All Rights Reserved by <a href="#" target="_blank">validtemplates</a></p>
+            <ul class="bottom-links">
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
