@@ -1,4 +1,4 @@
-/* assets/css/pages/error-404.css */
+/* assets/css/pages/-404.css */
 
 /* Variables (asegúrate de que estén accesibles, si no, defínelas aquí) */
 :root {
@@ -12,8 +12,8 @@
     --very-light-grey: #f9f9f9;
 }
 
-/* ===== ERROR 404 SECTION STYLES ===== */
-.error-404-section {
+/* =====  404 SECTION STYLES ===== */
+.-404-section {
     padding: 100px 0; /* Padding superior e inferior */
     background-color: #fff; /* Fondo blanco para toda la sección */
     min-height: 80vh; /* Asegura que ocupe al menos la altura de la ventana */
@@ -21,7 +21,7 @@
     align-items: center; /* Centra verticalmente el contenido */
 }
 
-.error-404-container {
+.-404-container {
     display: flex;
     justify-content: center; /* Centrar las columnas */
     align-items: center; /* Centrar verticalmente los elementos en las columnas */
@@ -32,26 +32,26 @@
     flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */
 }
 
-.error-404-image-wrapper {
+.-404-image-wrapper {
     flex: 1; /* Ocupa el espacio disponible */
     min-width: 300px; /* Ancho mínimo antes de encogerse */
     text-align: center;
 }
 
-.error-404-img {
+.-404-img {
     max-width: 100%; /* Asegura que la imagen no se desborde */
     height: auto;
     display: block; /* Elimina espacio extra debajo de la imagen */
 }
 
-.error-404-content {
+.-404-content {
     flex: 1; /* Ocupa el espacio disponible */
     min-width: 300px; /* Ancho mínimo antes de encogerse */
     text-align: left; /* Alineación del texto a la izquierda como en la imagen */
     padding-top: 20px; /* Pequeño padding si el texto queda muy pegado al top en móvil */
 }
 
-.error-code {
+.-code {
     font-size: 8rem; /* Tamaño muy grande para el "404" */
     font-weight: 700;
     color: #ccc; /* Color gris claro como en la imagen */
@@ -59,14 +59,14 @@
     line-height: 1;
 }
 
-.error-title {
+.-title {
     font-size: 2.8rem;
     font-weight: 700;
     color: var(--text-dark); /* Color oscuro para el título */
     margin-bottom: 20px;
 }
 
-.error-description {
+.-description {
     font-size: 1rem;
     color: var(--text-dark); /* Color oscuro para la descripción */
     line-height: 1.6;
@@ -112,21 +112,21 @@
 
 /* Media Queries para responsividad */
 @media (max-width: 992px) {
-    .error-404-container {
+    .-404-container {
         flex-direction: column; /* Apila las columnas */
         text-align: center; /* Centra el texto */
         gap: 40px;
     }
 
-    .error-404-content {
+    .-404-content {
         text-align: center; /* Centra el texto en móviles */
     }
 
-    .error-code {
+    .-code {
         font-size: 6rem;
     }
 
-    .error-title {
+    .-title {
         font-size: 2.2rem;
     }
 
@@ -136,15 +136,15 @@
 }
 
 @media (max-width: 576px) {
-    .error-404-section {
+    .-404-section {
         padding: 60px 0;
     }
 
-    .error-code {
+    .-code {
         font-size: 5rem;
     }
 
-    .error-title {
+    .-title {
         font-size: 1.8rem;
     }
 }

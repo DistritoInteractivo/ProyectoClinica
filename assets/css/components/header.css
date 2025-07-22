@@ -81,7 +81,8 @@
 }
 
 .logo img {
-    height: 40px; /* Ajusta según el tamaño de tu logo */
+    width: 180px; /* Ajusta este valor al ancho deseado */
+    height: auto; /* Mantiene la relación de aspecto */
     display: block; /* Elimina espacio extra debajo de la imagen */
 }
 
