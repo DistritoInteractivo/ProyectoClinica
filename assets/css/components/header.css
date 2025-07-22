@@ -248,6 +248,14 @@
         transition: max-height 0.4s ease-out, opacity 0.4s ease, visibility 0.4s ease;
     }
 
+    /* En assets/css/components/header.css */
+.main-nav-bar .logo img {
+    height: auto; /* Mantiene la proporción */
+    max-width: 100%; /* Asegura que no se desborde */
+    /* Puede que ya tenga un ancho o alto definido, si no, agrégalo */
+    width: 180px; /* <--- Aumenta este valor para hacer el logo más grande */
+}
+
     /* Clase para mostrar el menú principal cuando está activo por JS */
     .main-nav.is-active {
         max-height: 500px; /* Suficiente altura para mostrar todo el menú. Ajusta según sea necesario. */
