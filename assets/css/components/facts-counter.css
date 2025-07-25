@@ -44,17 +44,81 @@
     text-align: center;
 }
 
-.departments-grid {
+.d.departments-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea columnas flexibles */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin-top: 20px;
+}
 
-  @media (max-width: 992px) {
-    .departments-grid {
-      grid-template-columns: 1fr;
-    }
-  }
+.department-card {
+    background-color: #f9f9f9; /* Color de fondo de las tarjetas */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex; /* Para alinear imagen y texto (opcional) */
+    flex-direction: row; /* Imagen a la izquierda, texto a la derecha (opcional) */
+    align-items: flex-start; /* Alineación vertical */
+    padding: 15px;
+}
+
+.department-card .department-image {
+    margin-right: 15px;
+    max-width: 120px; /* Ajusta el ancho máximo de la imagen */
+    height: auto;
+}
+
+.department-card .department-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.department-card .department-info {
+    flex-grow: 1; /* Permite que la información ocupe el espacio restante */
+}
+
+.department-card h3 {
+    color: var(--primary-color); /* Usa tu color primario */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.department-card h4 {
+    color: var(--dark-color); /* Usa un color de texto oscuro */
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.department-card p {
+    color: var(--text-color); /* Usa tu color de texto general */
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.department-card .read-more-link {
+    color: var(--primary-color); /* Usa tu color primario para el enlace */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.department-card .read-more-link:hover {
+    text-decoration: underline;
+}
+
+/* Si solo quieres el texto apilado (sin imagen a la izquierda) */
+/* .department-card {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.department-card .department-image {
+    margin-bottom: 15px;
+    margin-right: 0;
+    max-width: 100%;
+} */
 
 .department-card {
     /* CAMBIO CLAVE AQUÍ: Dos columnas con espacio */

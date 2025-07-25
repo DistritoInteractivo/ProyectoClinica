@@ -163,6 +163,121 @@
     border-color: var(--primary-teal);
 }
 
+/* assets/css/components/departments-cards.css */
+
+/* Variables (asegúrate de que estén definidas en tu archivo principal style.css o aquí si es solo para esta sección) */
+:root {
+    --primary-teal: #00A79D;
+    --dark-blue: #0F2139;
+    --text-dark: #333;
+    --text-light: #fff;
+    --grey-light: #f4f4f4;
+    --border-light: #eee;
+    --transition-speed: 0.3s;
+    --very-light-grey: #f9f9f9;
+}
+
+.departments-cards-section {
+    padding: 40px 0;
+    background-color: var(--grey-light); /* Fondo ligero para la sección de tarjetas */
+}
+
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cuadrícula responsiva con ancho mínimo de 300px */
+    gap: 30px; /* Espacio entre las tarjetas */
+    max-width: 1200px; /* Ancho máximo para el contenido de la cuadrícula */
+    margin: 0 auto; /* Centra la cuadrícula */
+    padding: 0 15px; /* Relleno consistente a los lados */
+}
+
+.department-card {
+    background-color: var(--text-light); /* Fondo blanco para cada tarjeta */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Asegura que el contenido respete el border-radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para efectos al pasar el ratón */
+    display: flex; /* Usar flexbox para el diseño interno */
+    flex-direction: column; /* Apilar el contenido verticalmente */
+}
+
+.department-card:hover {
+    transform: translateY(-5px); /* Efecto de "levantar" al pasar el ratón */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.department-info {
+    padding: 25px; /* Relleno dentro de la sección de información */
+    flex-grow: 1; /* Permite que la sección de información ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column; /* Apila los elementos internos verticalmente */
+}
+
+.card-title {
+    color: var(--primary-teal); /* Color teal para los títulos principales */
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.card-subtitle {
+    color: var(--dark-blue); /* Color azul oscuro para los subtítulos */
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card-description {
+    color: var(--text-dark); /* Color de texto oscuro */
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    flex-grow: 1; /* Permite que la descripción crezca para ocupar espacio */
+}
+
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.card-list li {
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-size: 15px;
+}
+
+.card-list li i {
+    color: var(--primary-teal); /* Color teal para los iconos de lista */
+    margin-right: 10px;
+}
+
+.read-more-link {
+    display: inline-block;
+    background-color: var(--primary-teal);
+    color: var(--text-light);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: auto; /* Empuja el botón hacia la parte inferior de la tarjeta */
+    align-self: flex-start; /* Alinea el botón al inicio (izquierda) */
+    transition: background-color 0.3s ease;
+}
+
+.read-more-link:hover {
+    background-color: var(--dark-blue); /* Tono más oscuro al pasar el ratón */
+}
+
+/* Ajustes responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .departments-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas más pequeñas */
+    }
+}
+
 /* Responsive Styles */
 @media (max-width: 1200px) {
     .info-card {
@@ -212,3 +327,4 @@
         font-size: 0.85rem;
     }
 }
+
