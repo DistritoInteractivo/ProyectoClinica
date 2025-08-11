@@ -29,3 +29,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const readMoreButtons = document.querySelectorAll('.read-more-link');
+
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // Previene el comportamiento por defecto del enlace
+            
+            const targetId = button.getAttribute('data-target');
+            const targetContent = document.querySelector(targetId);
+
+            if (targetContent) {
+                // Alterna la clase 'active' para mostrar/ocultar el contenido
+                const isActive = targetContent.classList.toggle('active');
+                
+                // Cambia el texto del botón
+                if (isActive) {
+                    button.textContent = 'Ver menos <';
+                } else {
+                    button.textContent = 'Ver más >';
+                }
+            }
+        });
+    });
+});

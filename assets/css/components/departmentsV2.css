@@ -257,3 +257,25 @@
         padding: 0 20px 15px;
     }
 }
+
+
+/* Oculta el contenido adicional por defecto */
+.content-hidden {
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Muestra el contenido cuando la clase 'active' está presente */
+.content-hidden.active {
+    display: block;
+    max-height: 1000px; /* Un valor grande para asegurar que se despliega completamente */
+    opacity: 1;
+}
+
+/* Opcional: Ajusta el cursor del botón para indicar que es clicable */
+.read-more-link {
+    cursor: pointer;
+}

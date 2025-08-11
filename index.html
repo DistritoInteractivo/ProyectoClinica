@@ -48,28 +48,13 @@
         </a>
 
         <nav class="main-nav" id="main-navigation">
-          <ul>
-            <li><a href="index.html" class="nav-link active">INICIO</a></li>
-
-            <li class="has-dropdown">
-              <a href="index.html" class="nav-link">PAGINAS <i class="fas fa-chevron-down"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="aboutUs.html">Acerca de nosotros</a></li>
-                <li><a href="contactUs.html">Contáctanos</a></li>
-                
-              </ul>
-            </li>
-
-            <li>
-                <a href="departments.html" class="nav-link">SERVICIOS</a>
-            </li>
-
-            <li>
-                <a href="blog.html" class="nav-link">BLOG</a>
-              </li>
-
-            <li><a href="contactUs.html" class="nav-link">CONTÁCTANOS</a></li>
-          </ul>
+            <ul>
+                <li><a href="index.html" class="nav-link">INICIO</a></li>
+                <li><a href="aboutUs.html" class="nav-link">ACERCA DE NOSOTROS</a></li>
+                <li><a href="departments.html" class="nav-link">SERVICIOS</a></li>
+                <li><a href="blog.html" class="nav-link">BLOG</a></li>
+                <li><a href="contactUs.html" class="nav-link">CONTÁCTANOS</a></li>
+            </ul>
         </nav>
 
         <div class="nav-right">
@@ -109,63 +94,53 @@
     </div>
   </section>
 
-  <section class="appointment-section">
+  <section class="appointment-section" id="appointment">
     <div class="container appointment-container">
       <!-- FORMULARIO REESTRUCTURADO -->
       <div class="appointment-form-card">
-        <h2>Make An Appointment</h2>
+        <h2>Agenda tu cita</h2>
         <form action="#" method="POST" class="appointment-form">
           <div class="form-row">
             <div class="form-group underline">
-              <label for="firstName">First Name</label>
+              <label for="firstName">Nombre</label>
               <input type="text" id="firstName" name="firstName" required />
             </div>
             <div class="form-group underline">
-              <label for="lastName">Last Name</label>
+              <label for="lastName">Apellido</label>
               <input type="text" id="lastName" name="lastName" required />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group underline">
-              <label for="phone">Phone</label>
+              <label for="phone">Número</label>
               <input type="tel" id="phone" name="phone" required />
             </div>
             <div class="form-group underline">
-              <label for="appointmentDate">Appointment Date</label>
-              <input type="text" id="appointmentDate" name="appointmentDate" placeholder="YYYY-MM-DD" onfocus="(this.type='date')" onblur="(this.type='text')" required />
+              <label for="appointmentDate">Fecha de cita</label>
+              <input type="text" id="appointmentDate" name="appointmentDate" placeholder="DD-MM-YYYY" onfocus="(this.type='date')" onblur="(this.type='text')" required />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group select-wrapper">
               <select id="gender" name="gender" required>
-                <option value="" disabled selected>Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </select>
-              <i class="fas fa-chevron-down select-arrow"></i>
-            </div>
-
-            <div class="form-group select-wrapper">
-              <select id="department" name="department" required>
-                <option value="" disabled selected>Select Department</option>
-                <option value="cardiology">Cardiology</option>
-                <option value="neurology">Neurology</option>
-                <option value="pediatrics">Pediatrics</option>
+                <option value="" disabled selected>Seleccionar género</option>
+                <option value="male">Masculino</option>
+                <option value="female">Femenino</option>
+                <option value="other">Otro</option>
               </select>
               <i class="fas fa-chevron-down select-arrow"></i>
             </div>
           </div>
 
           <div class="form-group full-width underline">
-            <label for="problem">Briefly state your problem *</label>
+            <label for="problem">Breve descripción del estado del paciente *</label>
             <textarea id="problem" name="problem" rows="5" required></textarea>
           </div>
 
           <button type="submit" class="btn submit-query-btn">
-            Submit Query <i class="fas fa-paper-plane"></i>
+            Agendar cita <i class="fas fa-paper-plane"></i>
           </button>
         </form>
       </div>
@@ -191,15 +166,15 @@
         <div class="consultation-features">
           <div class="feature-item">
             <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
-            <p>Appointment</p>
+            <p>Agenda</p>
           </div>
           <div class="feature-item">
             <div class="feature-icon"><i class="fas fa-user-md"></i></div>
-            <p>Select Doctor</p>
+            <p>Selecciona</p>
           </div>
           <div class="feature-item">
             <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
-            <p>Consultation</p>
+            <p>Consulta</p>
           </div>
         </div>
       </div>
@@ -211,16 +186,20 @@
       <!-- COLUMNA IZQUIERDA -->
       <div class="about-us-left">
         <h2 class="section-subtitle">Acerca de nosotros</h2>
-        <h3 class="section-title">A Great Place to Work. A Great Place to Receive Care. Leading Medicine.</h3>
-        <p class="about-us-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilis maiores, qui impedit animi. Explicabo quibusdam maxime hic eaque suscipit voluptate asperiores mollitia. Ipsam fugit, optio architecto eligendi recusandae provident! Harum.</p>
+        <h3 class="section-title">Bienvenido a Ozono Center México.</h3>
+        <p class="about-us-description">Tu salud merece una alternativa confiable, efectiva y natural.
+Con más de 25 años de experiencia, te ayudamos a aliviar el dolor, reducir la inflamación y recuperar tu bienestar con terapias regenerativas respaldadas por la ciencia.
+</p>
 
         <div class="emergency-care-list">
-          <h4 class="emergency-care-title">Emergency care</h4>
+          <h4 class="emergency-care-title">Nuestros tratamientos</h4>
           <ul class="emergency-list">
-            <li><i class="fas fa-check-circle"></i> Primary Care</li>
-            <li><i class="fas fa-check-circle"></i> Medicine</li>
-            <li><i class="fas fa-check-circle"></i> Orthopedic</li>
-            <li><i class="fas fa-check-circle"></i> Cardiology</li>
+            <li><i class="fas fa-check-circle"></i> Ozonoterapia médica</li>
+            <li><i class="fas fa-check-circle"></i> Tratamiento para várices</li>
+            <li><i class="fas fa-check-circle"></i> Artritis reumatoide</li>
+            <li><i class="fas fa-check-circle"></i> Pie diabético</li>
+            <li><i class="fas fa-check-circle"></i> Dolor de espalda y hernia discal</li>
+            <li><i class="fas fa-check-circle"></i> Terapia de rehabilitación</li>
           </ul>
         </div>
       </div>
@@ -235,11 +214,11 @@
             <div class="card-icon-wrapper">
               <i class="fas fa-stethoscope"></i>
             </div>
-            <h4 class="card-title-new">Daily Care</h4>
+            <h4 class="card-title-new">Da el primer paso hacia una vida con menos dolor</h4>
           </div>
           <div class="card-description-wrapper">
-            <p class="card-description-new">Article smiling respect opinion excited. Welcomed humoured rejoiced peculiar to remaining conveying.</p>
-            <a href="#" class="btn btn-secondary-new">Read More <i class="fas fa-arrow-right"></i></a>
+            <p>📅 Agenda tu cita hoy mismo y obtén 50% de descuento en tu primera consulta.</p>
+              
           </div>
         </div>
 
@@ -251,11 +230,12 @@
             <div class="card-icon-wrapper">
               <i class="fas fa-ribbon"></i>
             </div>
-            <h4 class="card-title-new">Cancer Care</h4>
+            <h4 class="card-title-new">Ozono Center</h4>
           </div>
           <div class="card-description-wrapper">
-            <p class="card-description-new">Article smiling respect opinion excited. Welcomed humoured rejoiced peculiar to remaining conveying.</p>
-            <a href="#" class="btn btn-secondary-new">Read More <i class="fas fa-arrow-right"></i></a>
+              <p>✅ Atención profesional y humana.</p>
+              <p>✅ Resultados visibles desde las primeras sesiones.</p>
+              <p>✅ Miles de pacientes satisfechos nos respaldan.</p>
           </div>
         </div>
       </div>
@@ -266,10 +246,10 @@
         <div class="container departments-container">
           <div class="department-list-wrapper">
             <ul class="department-list">
-              <li class="department-item active" data-department="medical-checkup"><i class="fas fa-notes-medical"></i> Medical Checkup</li>
-              <li class="department-item" data-department="cardiology"><i class="fas fa-heartbeat"></i> Cardiology</li>
-              <li class="department-item" data-department="dental-care"><i class="fas fa-tooth"></i> Dental Care</li>
-              <li class="department-item" data-department="neurology"><i class="fas fa-brain"></i> Neurology</li>
+              <li class="department-item active" data-department="medical-checkup"><i class="fas fa-notes-medical"></i> Ozonoterapia médica </li>
+              <li class="department-item" data-department="cardiology"><i class="fas fa-walking"></i> Tratamiento para várices</li>
+              <li class="department-item" data-department="dental-care"><i class="fas fa-hand-holding-medical"></i> Artritis reumatoide</li>
+              <li class="department-item" data-department="neurology"><i class="fas fa-shoe-prints"></i> Pie diabético</li>
             </ul>
           </div>
 
@@ -281,11 +261,8 @@
                     <img src="./assets/images/chequeo.avif" alt="Medical Checkup">
                   </div>
                   <div class="content-text">
-                    <h3 class="content-title">Welcome To Our Medical Checkup Department</h3>
-                    <p class="content-description">Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery.</p>
-                    <div class="button-wrapper">
-                      <a href="#" class="btn btn-primary-alt">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                    <h3 class="content-title">Ozonoterapia médica</h3>
+                    <p class="content-description">Terapia regenerativa que mejora tu calidad de vida, reduce inflamación y activa tus defensas naturales.</p>
                   </div>
                 </div>
               </div>
@@ -296,11 +273,9 @@
                     <img src="./assets/images/cardio.avif" alt="Cardiology">
                   </div>
                   <div class="content-text">
-                    <h3 class="content-title">Welcome To Our Cardiology Department</h3>
-                    <p class="content-description">Cardiology involves the study and treatment of heart conditions. Our expert team provides comprehensive care for all your cardiac needs.</p>
-                    <div class="button-wrapper">
-                      <a href="#" class="btn btn-primary-alt">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                    <h3 class="content-title">Tratamiento para várices</h3>
+                    <p class="content-description">Mejora tu circulación y alivia el dolor con procedimientos seguros y eficaces.</p>
+                    
                   </div>
                 </div>
               </div>
@@ -311,11 +286,9 @@
                     <img src="./assets/images/dent.avif" alt="Dental Care">
                   </div>
                   <div class="content-text">
-                    <h3 class="content-title">Welcome To Our Dental Care Department</h3>
-                    <p class="content-description">From routine check-ups to advanced procedures, our dental care department ensures your smile is healthy and bright.</p>
-                    <div class="button-wrapper">
-                      <a href="#" class="btn btn-primary-alt">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                    <h3 class="content-title">Artritis reumatoide</h3>
+                    <p class="content-description">Reduce rigidez y mejora la movilidad con un enfoque integral y sin efectos secundarios agresivos.</p>
+
                   </div>
                 </div>
               </div>
@@ -326,11 +299,9 @@
                     <img src="./assets/images/neur.avif" alt="Neurology">
                   </div>
                   <div class="content-text">
-                    <h3 class="content-title">Welcome To Our Neurology Department</h3>
-                    <p class="content-description">Our neurology specialists provide compassionate care for disorders of the brain, spinal cord, and nervous system.</p>
-                    <div class="button-wrapper">
-                      <a href="#" class="btn btn-primary-alt">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                    <h3 class="content-title"> Pie diabético</h3>
+                    <p class="content-description">Previene complicaciones con un tratamiento especializado y seguimiento cercano.</p>
+
                   </div>
                 </div>
               </div>
@@ -339,109 +310,18 @@
         </div>
 </section>
 
-<section class="testimonials-section">
-    <div class="container testimonials-container">
-        <div class="testimonial-left">
-            <h2 class="section-title">What People Say?</h2>
-            <p class="testimonial-summary">Power dried her taken place day ought the. Four and our ham west miss. Education shameless who middleton agreement how. We in found world chief is at means weeks smile.</p>
-            <div class="button-wrapper"> <a href="#" class="btn btn-secondary-new">VIEW ALL <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-      <div class="testimonial-right">
-        <div class="testimonial-slider-wrapper">
-          <div class="testimonial-slide active" data-testimonial="1">
-            <div class="testimonial-content">
-              <h3 class="testimonial-title">Exceptional Care</h3>
-              <p class="testimonial-description">Board certification is one of the most important factors to consider.</p>
-              <hr class="testimonial-divider">
-              <div class="testimonial-author">
-                <div class="author-image">
-                  <img src="./assets/images/op1.avif" alt="Jessika Jones">
-                </div>
-                <div class="author-info">
-                  <h4 class="author-name">Jessika Jones</h4>
-                  <p class="author-specialty">HEART SPECIALIST</p>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="testimonial-slide" data-testimonial="2">
-            <div class="testimonial-content">
-              <h3 class="testimonial-title">Truly Caring</h3>
-              <p class="testimonial-description">The care I received was exceptional. The doctors were knowledgeable and took the time to explain everything. I felt very comfortable and well-informed throughout my treatment.</p>
-              <hr class="testimonial-divider">
-              <div class="testimonial-author">
-                <div class="author-image">
-                  <img src="./assets/images/op2.avif" alt="John Doe">
-                </div>
-                <div class="author-info">
-                  <h4 class="author-name">John Doe</h4>
-                  <p class="author-specialty">HAPPY PATIENT</p>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="testimonial-slide" data-testimonial="3">
-            <div class="testimonial-content">
-              <h3 class="testimonial-title">Outstanding Service</h3>
-              <p class="testimonial-description">I highly recommend this hospital. The staff is friendly, professional, and the facilities are top-notch. My recovery was smooth, and I am very grateful for the care I received.</p>
-              <hr class="testimonial-divider">
-              <div class="testimonial-author">
-                <div class="author-image">
-                  <img src="./assets/images/op3.avif" alt="Jane Smith">
-                </div>
-                <div class="author-info">
-                  <h4 class="author-name">Jane Smith</h4>
-                  <p class="author-specialty">RECOVERED PATIENT</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-navigation custom-diamond-nav">
-          <button class="nav-dot active" data-slide="1" aria-label="Go to slide 1"></button>
-          <button class="nav-dot" data-slide="2" aria-label="Go to slide 2"></button>
-          <button class="nav-dot" data-slide="3" aria-label="Go to slide 3"></button>
-        </div>
-      </div>
+ <section class="static-banner" style="background-image: url('assets/images/hero1.avif');">
+  <div class="container banner-content">
+    <div class="banner-text">
+      <p class="banner-subtitle">BIENVENIDO A OZONO CENTER</p>
+      <h1 class="banner-title">Tu Salud Es Nuestra Prioridad</h1>
+      <a href="#appointment" class="btn btn-primary-banner">AGENDAR CITA</a>
     </div>
-  </section>
-
-  <section class="stats-section">
-    <div class="container stats-container">
-        <div class="stat-item">
-            <div class="stat-icon">
-                <i class="fas fa-smile-beam"></i>
-            </div>
-            <h3 class="stat-number">12</h3>
-            <p class="stat-label">Satisfied Patients</p>
-        </div>
-        <div class="stat-item">
-            <div class="stat-icon">
-                <i class="fas fa-building"></i>
-            </div>
-            <h3 class="stat-number">38</h3>
-            <p class="stat-label">SERVICIOS</p>
-        </div>
-        <div class="stat-item">
-            <div class="stat-icon">
-                <i class="fas fa-user-md"></i>
-            </div>
-            <h3 class="stat-number">278</h3>
-            <p class="stat-label">Regular Doctors</p>
-        </div>
-        <div class="stat-item">
-            <div class="stat-icon">
-                <i class="fas fa-users-cog"></i>
-            </div>
-            <h3 class="stat-number">1488</h3>
-            <p class="stat-label">Servant</p>
-        </div>
-    </div>
+  </div>
 </section>
+
 
 <section class="latest-blog-section">
     <div class="container blog-header">
@@ -505,28 +385,38 @@
     </div>
 </section>
 
+<section class="map-newsletter-section">
+    
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.785876740979!2d-99.094948!3d19.507846000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fa18c68a3cdf%3A0x8f842ca2444ef8e1!2sVicente%20Garc%C3%ADa%20Gonz%C3%A1lez%2095%2C%20El%20Risco%20CTM%2C%20Gustavo%20A.%20Madero%2C%2007090%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1754886598689!5m2!1ses-419!2smx" 
+    width="100%"
+    height="500"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    class="google-map-iframe">
+</iframe> 
+
+</section>
+
+<p></p>
 
 <section class="map-newsletter-section">
-    <div class="newsletter-overlay">
-        <div class="container newsletter-content">
-            <h3 class="newsletter-title">Newsletter</h3>
-            <p class="newsletter-subtitle">Stay up to date with our latest news</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your Email*" class="newsletter-input" required>
-                <button type="submit" class="btn-secondary-new">Subscribe</button>
-            </form>
-        </div>
-    </div>
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.3912630598686!2d70.77196027503792!3d23.04874051566497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959b489c7c645e7%3A0xc0f1b2b8e3a2c5a!2sRajkot%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2smx!4v1701700000000!5m2!1sen!2smx"
-        width="100%"
-        height="500"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        class="google-map-iframe"></iframe>
+    
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.520817338295!2d-99.1412429!3d19.4330994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b4aff864b%3A0x2bc37385db0306c9!2sEje%20Central%20L%C3%A1zaro%20C%C3%A1rdenas%2013%2C%20Colonia%20Centro%2C%20Centro%2C%20Cuauht%C3%A9moc%2C%2006000%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1754886443086!5m2!1ses-419!2smx" 
+    width="100%"
+    height="500"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    class="google-map-iframe">
+</iframe>  
+
 </section>
+
+
 
 <footer class="main-footer">
     <div class="container footer-content">
@@ -596,6 +486,9 @@
     </div>
 </footer>
 
+<a href="https://wa.me/525579984664" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
   <!-- Scripts -->
   <script type="module" src="assets/js/main.js"></script>
